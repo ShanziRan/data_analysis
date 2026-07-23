@@ -52,6 +52,36 @@ def _split_top_level_alternatives(text):
     return parts
 
 
+def _expand_plain_slash_list(text):
+    parts = [part.strip() for part in text.split('/') if part.strip()]
+    if not parts:
+        return []
+
+    starter_pattern = re.compile(r'^(does|do|did|can|could|will|would|is|are|was|were|has|have|had)\b', re.IGNORECASE)
+    stitched = []
+    idx = 0
+
+    while idx < len(parts):
+        current = parts[idx]
+        next_part = parts[idx + 1] if idx + 1 < len(parts) else None
+
+        # Handle split phrases like "does Sandra/sing well" by joining adjacent fragments.
+        if (
+            next_part
+            and starter_pattern.match(current)
+            and len(current.split()) <= 3
+            and not starter_pattern.match(next_part)
+        ):
+            stitched.append(f"{current} {next_part}".strip())
+            idx += 2
+            continue
+
+        stitched.append(current)
+        idx += 1
+
+    return list(dict.fromkeys(stitched))
+
+
 def expand_answer_variations(answer_key):
     if pd.isna(answer_key):
         return []
@@ -62,6 +92,11 @@ def expand_answer_variations(answer_key):
 
     # Single-character answer keys such as A, B, C are already complete
     if re.fullmatch(r'^[A-Za-z0-9]+$', text):
+        return [text]
+
+    if '[' not in text and '(' not in text:
+        if '/' in text:
+            return _expand_plain_slash_list(text)
         return [text]
 
     def expand_sequence(seq):
@@ -180,85 +215,96 @@ def damerau_levenshtein_distance(source, target):
     return matrix[len_source + 1][len_target + 1]
 
 
-# Extract all accepted answer variations for the top 25 rows (D822-03 full paper) and print them
-output_log = []
-output_dir = Path('output')
-output_dir.mkdir(exist_ok=True)
-output_path = output_dir / 'edit_distance_damerau.json'
+def run_distance_analysis(row_start, row_end, skipped_rows=None):
+    output_log = []
+    output_dir = Path('output')
+    output_dir.mkdir(exist_ok=True)
+    output_path = output_dir / f'distance_analysis_{row_start}_{row_end}_ref.json'
 
-print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Starting answer key processing")
-answer_key_start = time.perf_counter()
+    skip_set = set(skipped_rows or [])
 
-data['distance'] = pd.NA
-data['best_variation'] = pd.NA
-data['similarity'] = pd.NA
+    print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Starting answer key processing")
+    answer_key_start = time.perf_counter()
 
-top_25_answers = data['ANSWER Key'].head(25).dropna()
-top_25_answers = top_25_answers.drop(index=8, errors='ignore')
-expanded_variations = {}
-for idx, answer in top_25_answers.items():
-    accepted_answers = expand_answer_variations(answer)
-    expanded_variations[idx] = accepted_answers
-    message = f"Row {idx}: {len(accepted_answers)} variations"
+    data['distance'] = pd.NA
+    data['best_variation'] = pd.NA
+    data['similarity'] = pd.NA
+
+    selected_answers = data['ANSWER Key'].iloc[row_start:row_end].dropna()
+    selected_answers = selected_answers.drop(index=skip_set, errors='ignore')
+
+    expanded_variations = {}
+    for idx, answer in selected_answers.items():
+        accepted_answers = expand_answer_variations(answer)
+        expanded_variations[idx] = accepted_answers
+        message = f"Row {idx}: {len(accepted_answers)} variations"
+        print(message)
+
+    answer_key_elapsed = time.perf_counter() - answer_key_start
+    message = f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Finished answer key processing in {answer_key_elapsed:.2f} seconds"
     print(message)
-    # output_log.append({'type': 'info', 'message': message})
+    output_log.append({'type': 'info', 'message': message})
 
-answer_key_elapsed = time.perf_counter() - answer_key_start
-message = f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Finished answer key processing in {answer_key_elapsed:.2f} seconds"
-print(message)
-output_log.append({'type': 'info', 'message': message})
+    print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Starting minimum distance calculation")
+    distance_start = time.perf_counter()
 
-print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Starting minimum distance calculation")
-distance_start = time.perf_counter()
+    for idx, accepted_answers in expanded_variations.items():
+        captured_value = str(data.loc[idx, 'Captured']).strip()
+        if not accepted_answers or not captured_value:
+            min_distance = None
+            best_variation = None
+        else:
+            min_distance = None
+            best_variation = None
+            for candidate in accepted_answers:
+                candidate_text = str(candidate).strip()
+                distance = levenshtein_distance(captured_value, candidate_text)
+                if min_distance is None or distance < min_distance:
+                    min_distance = distance
+                    best_variation = candidate_text
 
-for idx, accepted_answers in expanded_variations.items():
-    captured_value = str(data.loc[idx, 'Captured']).strip()
-    if not accepted_answers or not captured_value:
-        min_distance = None
-        best_variation = None
-    else:
-        min_distance = None
-        best_variation = None
-        for candidate in accepted_answers:
-            candidate_text = str(candidate).strip()
-            distance = damerau_levenshtein_distance(captured_value, candidate_text)
-            if min_distance is None or distance < min_distance:
-                min_distance = distance
-                best_variation = candidate_text
+        if min_distance is None or not captured_value:
+            similarity = None
+        else:
+            max_len = max(len(captured_value), len(best_variation or ""))
+            # similarity = 1.0 - (min_distance / max_len) if max_len else 1.0
+            similarity = 1.0 - (min_distance / len(best_variation)) if best_variation else 1.0
 
-    if min_distance is None or not captured_value:
-        similarity = None
-    else:
-        max_len = max(len(captured_value), len(best_variation or ""))
-        similarity = 1.0 - (min_distance / max_len) if max_len else 1.0
+        data.at[idx, 'distance'] = min_distance
+        data.at[idx, 'best_variation'] = best_variation
+        data.at[idx, 'similarity'] = similarity
+        uid_value = data.loc[idx, 'UID']
+        confidence_value = data.loc[idx, 'confidence']
+        message = (
+            f"Row {idx+2}: UID = {uid_value}, confidence = {confidence_value}, "
+            f"captured = {captured_value}, min distance = {min_distance}, "
+            f"best variation = {best_variation}, similarity = {similarity}"
+        )
+        print(message)
+        output_log.append({
+            'row': idx+2,
+            'UID': uid_value,
+            'confidence': confidence_value,
+            'captured': captured_value,
+            'min_distance': min_distance,
+            'best_variation': best_variation,
+            'similarity': similarity,
+        })
 
-    data.at[idx, 'distance'] = min_distance
-    data.at[idx, 'best_variation'] = best_variation
-    data.at[idx, 'similarity'] = similarity
-    uid_value = data.loc[idx, 'UID']
-    confidence_value = data.loc[idx, 'confidence']
-    message = (
-        f"Row {idx+2}: UID = {uid_value}, confidence = {confidence_value}, "
-        f"captured = {captured_value}, min distance = {min_distance}, "
-        f"best variation = {best_variation}, similarity = {similarity}"
-    )
+    distance_elapsed = time.perf_counter() - distance_start
+    message = f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Finished minimum distance calculation in {distance_elapsed:.2f} seconds"
     print(message)
-    output_log.append({
-        'row': idx,
-        'UID': uid_value,
-        'confidence': confidence_value,
-        'captured': captured_value,
-        'min_distance': min_distance,
-        'best_variation': best_variation,
-        'similarity': similarity,
-    })
+    output_log.append({'type': 'info', 'message': message})
 
-distance_elapsed = time.perf_counter() - distance_start
-message = f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Finished minimum distance calculation in {distance_elapsed:.2f} seconds"
-print(message)
-output_log.append({'type': 'info', 'message': message})
+    with output_path.open('w', encoding='utf-8') as handle:
+        json.dump(output_log, handle, indent=2, ensure_ascii=False)
 
-with output_path.open('w', encoding='utf-8') as handle:
-    json.dump(output_log, handle, indent=2, ensure_ascii=False)
+    print(f"Saved output log to {output_path}")
 
-print(f"Saved output log to {output_path}")
+
+# Set row range here (0-indexed) and specify any rows to skip (0-indexed)
+ROW_START = 231636
+ROW_END = 231688
+SKIP_ROWS = []
+
+run_distance_analysis(row_start=ROW_START, row_end=ROW_END, skipped_rows=SKIP_ROWS)

@@ -1,0 +1,45 @@
+{
+  "ranges": [
+    {
+      "range_file": "confidence_range_0_75_to_0_80.csv",
+      "valid_rows": 2578,
+      "errors": 718,
+      "error_rate": 27.851047
+    },
+    {
+      "range_file": "confidence_range_0_80_to_0_85.csv",
+      "valid_rows": 3398,
+      "errors": 747,
+      "error_rate": 21.98352
+    },
+    {
+      "range_file": "confidence_range_0_85_to_0_90.csv",
+      "valid_rows": 5585,
+      "errors": 90,
+      "error_rate": 1.611459
+    },
+    {
+      "range_file": "confidence_range_0_90_to_0_95.csv",
+      "valid_rows": 22705,
+      "errors": 151,
+      "error_rate": 0.665052
+    },
+    {
+      "range_file": "confidence_range_0_95_end.csv",
+      "valid_rows": 433899,
+      "errors": 703,
+      "error_rate": 0.162019
+    },
+    {
+      "range_file": "confidence_range_start_0_75.csv",
+      "valid_rows": 11835,
+      "errors": 5448,
+      "error_rate": 46.032953
+    }
+  ],
+  "overall": {
+    "overall_error_rate": 1.636875,
+    "total_errors": 7857,
+    "total_rows": 480000
+  }
+}

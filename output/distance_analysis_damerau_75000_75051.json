@@ -1,0 +1,469 @@
+[
+  {
+    "type": "info",
+    "message": "[2026-07-22 12:44:03] Finished answer key processing in 0.02 seconds"
+  },
+  {
+    "row": 75002,
+    "UID": "MA017135744433578081300003709200158",
+    "confidence": 0.9987,
+    "captured": "C",
+    "min_distance": 0,
+    "best_variation": "C",
+    "similarity": 1.0
+  },
+  {
+    "row": 75003,
+    "UID": "MA017135744433578082300003709200158",
+    "confidence": 0.9991,
+    "captured": "D",
+    "min_distance": 0,
+    "best_variation": "D",
+    "similarity": 1.0
+  },
+  {
+    "row": 75004,
+    "UID": "MA017135744433578083300003709200158",
+    "confidence": 0.6305,
+    "captured": "B",
+    "min_distance": 0,
+    "best_variation": "B",
+    "similarity": 1.0
+  },
+  {
+    "row": 75005,
+    "UID": "MA017135744433578084300003709200158",
+    "confidence": 0.9959,
+    "captured": "D",
+    "min_distance": 0,
+    "best_variation": "D",
+    "similarity": 1.0
+  },
+  {
+    "row": 75006,
+    "UID": "MA017135744433578085300003709200158",
+    "confidence": 0.9991,
+    "captured": "D",
+    "min_distance": 1,
+    "best_variation": "A",
+    "similarity": 0.0
+  },
+  {
+    "row": 75007,
+    "UID": "MA017135744433578086300003709200158",
+    "confidence": 0.9993,
+    "captured": "D",
+    "min_distance": 0,
+    "best_variation": "D",
+    "similarity": 1.0
+  },
+  {
+    "row": 75008,
+    "UID": "MA017135744433578087300003709200158",
+    "confidence": 0.968,
+    "captured": "C",
+    "min_distance": 0,
+    "best_variation": "C",
+    "similarity": 1.0
+  },
+  {
+    "row": 75009,
+    "UID": "MA017135744433578088300003709200158",
+    "confidence": 0.9996,
+    "captured": "A",
+    "min_distance": 0,
+    "best_variation": "A",
+    "similarity": 1.0
+  },
+  {
+    "row": 75010,
+    "UID": "MA017135744433578089300003709200158",
+    "confidence": 0.9888,
+    "captured": "WITH",
+    "min_distance": 0,
+    "best_variation": "with",
+    "similarity": 1.0
+  },
+  {
+    "row": 75011,
+    "UID": "MA0171357444335780810300003709200158",
+    "confidence": 0.9887,
+    "captured": "THAT",
+    "min_distance": 0,
+    "best_variation": "that",
+    "similarity": 1.0
+  },
+  {
+    "row": 75012,
+    "UID": "MA0171357444335780811300003709200158",
+    "confidence": 0.9861,
+    "captured": "WORDS",
+    "min_distance": 0,
+    "best_variation": "words",
+    "similarity": 1.0
+  },
+  {
+    "row": 75013,
+    "UID": "MA0171357444335780812300003709200158",
+    "confidence": 0.9929,
+    "captured": "IN",
+    "min_distance": 0,
+    "best_variation": "in",
+    "similarity": 1.0
+  },
+  {
+    "row": 75014,
+    "UID": "MA0171357444335780813300003709200158",
+    "confidence": 0.993,
+    "captured": "IT",
+    "min_distance": 0,
+    "best_variation": "it",
+    "similarity": 1.0
+  },
+  {
+    "row": 75015,
+    "UID": "MA0171357444335780814300003709200158",
+    "confidence": 0.9109,
+    "captured": "QR",
+    "min_distance": 1,
+    "best_variation": "or",
+    "similarity": 0.5
+  },
+  {
+    "row": 75016,
+    "UID": "MA0171357444335780815300003709200158",
+    "confidence": 0.9931,
+    "captured": "IF",
+    "min_distance": 0,
+    "best_variation": "If",
+    "similarity": 1.0
+  },
+  {
+    "row": 75017,
+    "UID": "MA0171357444335780816300003709200158",
+    "confidence": 0.9928,
+    "captured": "BE",
+    "min_distance": 0,
+    "best_variation": "be",
+    "similarity": 1.0
+  },
+  {
+    "row": 75018,
+    "UID": "MA0171357444335780817300003709200158",
+    "confidence": 0.9722,
+    "captured": "NECESSARILY",
+    "min_distance": 0,
+    "best_variation": "necessarily",
+    "similarity": 1.0
+  },
+  {
+    "row": 75019,
+    "UID": "MA0171357444335780818300003709200158",
+    "confidence": 0.9677,
+    "captured": "IMPERFECTIONS",
+    "min_distance": 0,
+    "best_variation": "imperfections",
+    "similarity": 1.0
+  },
+  {
+    "row": 75020,
+    "UID": "MA0171357444335780819300003709200158",
+    "confidence": 0.9723,
+    "captured": "COMBINASION",
+    "min_distance": 1,
+    "best_variation": "combination",
+    "similarity": 0.9090909090909091
+  },
+  {
+    "row": 75021,
+    "UID": "MA0171357444335780820300003709200158",
+    "confidence": 0.9751,
+    "captured": "ACCEPTABLE",
+    "min_distance": 0,
+    "best_variation": "acceptable",
+    "similarity": 1.0
+  },
+  {
+    "row": 75022,
+    "UID": "MA0171357444335780821300003709200158",
+    "confidence": 0.984,
+    "captured": "GROWTH",
+    "min_distance": 0,
+    "best_variation": "growth",
+    "similarity": 1.0
+  },
+  {
+    "row": 75023,
+    "UID": "MA0171357444335780822300003709200158",
+    "confidence": 0.9791,
+    "captured": "ACCURACY",
+    "min_distance": 0,
+    "best_variation": "accuracy",
+    "similarity": 1.0
+  },
+  {
+    "row": 75024,
+    "UID": "MA0171357444335780823300003709200158",
+    "confidence": 0.975,
+    "captured": "EXPRESSION",
+    "min_distance": 0,
+    "best_variation": "expression",
+    "similarity": 1.0
+  },
+  {
+    "row": 75025,
+    "UID": "MA0171357444335780824300003709200158",
+    "confidence": 0.9752,
+    "captured": "CONFIDENCE",
+    "min_distance": 0,
+    "best_variation": "confidence",
+    "similarity": 1.0
+  },
+  {
+    "row": 75026,
+    "UID": "MA0171357444335780825300003709200158",
+    "confidence": 0.952,
+    "captured": "IS SHE A GOOD SINGER",
+    "min_distance": 14,
+    "best_variation": "does she sing well",
+    "similarity": 0.30000000000000004
+  },
+  {
+    "row": 75027,
+    "UID": "MA0171357444335780826300003709200158",
+    "confidence": 0.9402,
+    "captured": "I WISH I HADN'T BROKE",
+    "min_distance": 3,
+    "best_variation": "wish I hadn't broken",
+    "similarity": 0.8571428571428572
+  },
+  {
+    "row": 75028,
+    "UID": "MA0171357444335780827300003709200158",
+    "confidence": 0.9617,
+    "captured": "WANT TO BE APART",
+    "min_distance": 13,
+    "best_variation": "apart from",
+    "similarity": 0.1875
+  },
+  {
+    "row": 75029,
+    "UID": "MA0171357444335780828300003709200158",
+    "confidence": 0.9705,
+    "captured": "MUST BE WORN",
+    "min_distance": 0,
+    "best_variation": "must be worn",
+    "similarity": 1.0
+  },
+  {
+    "row": 75030,
+    "UID": "MA0171357444335780829300003709200158",
+    "confidence": 0.9664,
+    "captured": "HE CAME TO SEE",
+    "min_distance": 9,
+    "best_variation": "to come across",
+    "similarity": 0.3571428571428571
+  },
+  {
+    "row": 75031,
+    "UID": "MA0171357444335780830300003709200158",
+    "confidence": 0.9586,
+    "captured": "NO POINT IN GOING",
+    "min_distance": 0,
+    "best_variation": "no point in going",
+    "similarity": 1.0
+  },
+  {
+    "row": 75032,
+    "UID": "MA0171357444335780831300003709200158",
+    "confidence": 0.999,
+    "captured": "C",
+    "min_distance": 0,
+    "best_variation": "C",
+    "similarity": 1.0
+  },
+  {
+    "row": 75033,
+    "UID": "MA0171357444335780832300003709200158",
+    "confidence": 0.9989,
+    "captured": "C",
+    "min_distance": 0,
+    "best_variation": "C",
+    "similarity": 1.0
+  },
+  {
+    "row": 75034,
+    "UID": "MA0171357444335780833300003709200158",
+    "confidence": 0.9994,
+    "captured": "A",
+    "min_distance": 0,
+    "best_variation": "A",
+    "similarity": 1.0
+  },
+  {
+    "row": 75035,
+    "UID": "MA0171357444335780834300003709200158",
+    "confidence": 0.9995,
+    "captured": "D",
+    "min_distance": 0,
+    "best_variation": "D",
+    "similarity": 1.0
+  },
+  {
+    "row": 75036,
+    "UID": "MA0171357444335780835300003709200158",
+    "confidence": 0.9997,
+    "captured": "B",
+    "min_distance": 0,
+    "best_variation": "B",
+    "similarity": 1.0
+  },
+  {
+    "row": 75037,
+    "UID": "MA0171357444335780836300003709200158",
+    "confidence": 0.9999,
+    "captured": "A",
+    "min_distance": 0,
+    "best_variation": "A",
+    "similarity": 1.0
+  },
+  {
+    "row": 75038,
+    "UID": "MA0171357444335780837300003709200158",
+    "confidence": 0.9997,
+    "captured": "F",
+    "min_distance": 0,
+    "best_variation": "F",
+    "similarity": 1.0
+  },
+  {
+    "row": 75039,
+    "UID": "MA0171357444335780838300003709200158",
+    "confidence": 0.9999,
+    "captured": "C",
+    "min_distance": 0,
+    "best_variation": "C",
+    "similarity": 1.0
+  },
+  {
+    "row": 75040,
+    "UID": "MA0171357444335780839300003709200158",
+    "confidence": 0.9999,
+    "captured": "E",
+    "min_distance": 0,
+    "best_variation": "E",
+    "similarity": 1.0
+  },
+  {
+    "row": 75041,
+    "UID": "MA0171357444335780840300003709200158",
+    "confidence": 0.9999,
+    "captured": "A",
+    "min_distance": 0,
+    "best_variation": "A",
+    "similarity": 1.0
+  },
+  {
+    "row": 75042,
+    "UID": "MA0171357444335780841300003709200158",
+    "confidence": 0.9999,
+    "captured": "B",
+    "min_distance": 1,
+    "best_variation": "G",
+    "similarity": 0.0
+  },
+  {
+    "row": 75043,
+    "UID": "MA0171357444335780842300003709200158",
+    "confidence": 0.9993,
+    "captured": "D",
+    "min_distance": 0,
+    "best_variation": "D",
+    "similarity": 1.0
+  },
+  {
+    "row": 75044,
+    "UID": "MA0171357444335780843300003709200158",
+    "confidence": 0.9999,
+    "captured": "A",
+    "min_distance": 1,
+    "best_variation": "B",
+    "similarity": 0.0
+  },
+  {
+    "row": 75045,
+    "UID": "MA0171357444335780844300003709200158",
+    "confidence": 0.9999,
+    "captured": "C",
+    "min_distance": 0,
+    "best_variation": "C",
+    "similarity": 1.0
+  },
+  {
+    "row": 75046,
+    "UID": "MA0171357444335780845300003709200158",
+    "confidence": 0.9997,
+    "captured": "D",
+    "min_distance": 0,
+    "best_variation": "D",
+    "similarity": 1.0
+  },
+  {
+    "row": 75047,
+    "UID": "MA0171357444335780846300003709200158",
+    "confidence": 0.9999,
+    "captured": "B",
+    "min_distance": 1,
+    "best_variation": "C",
+    "similarity": 0.0
+  },
+  {
+    "row": 75048,
+    "UID": "MA0171357444335780847300003709200158",
+    "confidence": 0.9999,
+    "captured": "A",
+    "min_distance": 0,
+    "best_variation": "A",
+    "similarity": 1.0
+  },
+  {
+    "row": 75049,
+    "UID": "MA0171357444335780848300003709200158",
+    "confidence": 0.9996,
+    "captured": "C",
+    "min_distance": 1,
+    "best_variation": "B",
+    "similarity": 0.0
+  },
+  {
+    "row": 75050,
+    "UID": "MA0171357444335780849300003709200158",
+    "confidence": 0.9999,
+    "captured": "D",
+    "min_distance": 0,
+    "best_variation": "D",
+    "similarity": 1.0
+  },
+  {
+    "row": 75051,
+    "UID": "MA0171357444335780850300003709200158",
+    "confidence": 0.9999,
+    "captured": "A",
+    "min_distance": 0,
+    "best_variation": "A",
+    "similarity": 1.0
+  },
+  {
+    "row": 75052,
+    "UID": "MA0171357444335780851300003709200158",
+    "confidence": 0.9995,
+    "captured": "B",
+    "min_distance": 0,
+    "best_variation": "B",
+    "similarity": 1.0
+  },
+  {
+    "type": "info",
+    "message": "[2026-07-22 12:44:03] Finished minimum distance calculation in 0.03 seconds"
+  }
+]

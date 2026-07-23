@@ -1,4 +1,5 @@
 import pandas as pd
+from pathlib import Path
 
 csv_path = 'main_data.csv'
 
@@ -15,21 +16,38 @@ else:
 # Test print to check the data shape
 print(f'Data shape: {data.shape}')
 
-# Calculate total percentage of OCR errors (Published != Captured)
-total_errors = (data['Published'] != data['Captured']).mean() * 100
-print(f'Total OCR Error Rate: {total_errors:.2f}%')
-# Print first example of an OCR error with the row number
-error_example = data[data['Published'] != data['Captured']].iloc[1]
-print(f'Example OCR Error (Row {error_example.name+2}):\nPublished: {error_example["Published"]}\nCaptured: {error_example["Captured"]}\nConfidence: {error_example["confidence"]}')
+# Threshold for adjustable confidence level, and store the subset of data to separate CSV files based on the confidence threshold
+thresholds = [0.75, 0.80, 0.85, 0.90, 0.95]
 
-# OCR error occurs and confidence above threshold
-error = (data['Published'] != data['Captured']) & (data['confidence'] >= 0.8)
-# Print first example of an OCR error with confidence above threshold
-error_example_conf = data[error].iloc[1]
-print(f'Example OCR Error with Confidence >= 0.8 (Row {error_example_conf.name+2}):\nPublished: {error_example_conf["Published"]}\nCaptured: {error_example_conf["Captured"]}\nConfidence: {error_example_conf["confidence"]}')
-# Calculate error rate based on confidence threshold
-# Error occurs when published != captured and confidence >= threshold
-# for confidence_threshold in (0.75, 0.8, 0.85, 0.9, 0.95):
-#     error_rate = (data['Published'] != data['Captured']) & (data['confidence'] >= confidence_threshold)
-#     error_rate_percentage = error_rate.mean() * 100
-#     print(f'Confidence Threshold: {confidence_threshold}, Error Rate: {error_rate_percentage:.2f}%')
+output_dir = Path('data')
+output_dir.mkdir(exist_ok=True)
+
+# Ensure confidence is numeric before range filtering.
+data['confidence'] = pd.to_numeric(data['confidence'], errors='coerce')
+
+
+def format_range_label(start, end):
+    if start is None:
+        return f"start_{end:.2f}".replace('.', '_')
+    if end is None:
+        return f"{start:.2f}_end".replace('.', '_')
+    return f"{start:.2f}_to_{end:.2f}".replace('.', '_')
+
+
+# Build ranges: <first, between each pair, and >=last threshold.
+ranges = [(None, thresholds[0])]
+ranges.extend((thresholds[i], thresholds[i + 1]) for i in range(len(thresholds) - 1))
+ranges.append((thresholds[-1], None))
+
+for start, end in ranges:
+    if start is None:
+        subset = data[data['confidence'] < end]
+    elif end is None:
+        subset = data[data['confidence'] >= start]
+    else:
+        subset = data[(data['confidence'] >= start) & (data['confidence'] < end)]
+
+    range_label = format_range_label(start, end)
+    output_path = output_dir / f"confidence_range_{range_label}.csv"
+    subset.to_csv(output_path, index=False)
+    print(f"Saved {len(subset)} rows to {output_path}")

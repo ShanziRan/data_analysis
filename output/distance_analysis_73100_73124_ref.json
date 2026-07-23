@@ -1,0 +1,226 @@
+[
+  {
+    "type": "info",
+    "message": "[2026-07-23 08:12:04] Finished answer key processing in 3.26 seconds"
+  },
+  {
+    "row": 73102,
+    "UID": "ES39770336961974639160000003140900477",
+    "confidence": 0.9796,
+    "captured": "B",
+    "min_distance": 1,
+    "best_variation": "C",
+    "similarity": 0.0
+  },
+  {
+    "row": 73103,
+    "UID": "ES39770336961974639260000003140900477",
+    "confidence": 0.9999,
+    "captured": "A",
+    "min_distance": 0,
+    "best_variation": "A",
+    "similarity": 1.0
+  },
+  {
+    "row": 73104,
+    "UID": "ES39770336961974639360000003140900477",
+    "confidence": 0.9997,
+    "captured": "C",
+    "min_distance": 0,
+    "best_variation": "C",
+    "similarity": 1.0
+  },
+  {
+    "row": 73105,
+    "UID": "ES39770336961974639460000003140900477",
+    "confidence": 0.9998,
+    "captured": "A",
+    "min_distance": 1,
+    "best_variation": "C",
+    "similarity": 0.0
+  },
+  {
+    "row": 73106,
+    "UID": "ES39770336961974639560000003140900477",
+    "confidence": 0.9999,
+    "captured": "C",
+    "min_distance": 0,
+    "best_variation": "C",
+    "similarity": 1.0
+  },
+  {
+    "row": 73107,
+    "UID": "ES39770336961974639660000003140900477",
+    "confidence": 0.986,
+    "captured": "SIXTY",
+    "min_distance": 0,
+    "best_variation": "sixty",
+    "similarity": 1.0
+  },
+  {
+    "row": 73108,
+    "UID": "ES39770336961974639760000003140900477",
+    "confidence": 0.9776,
+    "captured": "WEDNESDAY",
+    "min_distance": 0,
+    "best_variation": "Wednesday",
+    "similarity": 1.0
+  },
+  {
+    "row": 73109,
+    "UID": "ES39770336961974639860000003140900477",
+    "confidence": 0.8478,
+    "captured": "3:25",
+    "min_distance": 0,
+    "best_variation": "3:25",
+    "similarity": 1.0
+  },
+  {
+    "row": 73110,
+    "UID": "ES39770336961974639960000003140900477",
+    "confidence": 0.978,
+    "captured": "DOCHERTY",
+    "min_distance": 0,
+    "best_variation": "docherty",
+    "similarity": 1.0
+  },
+  {
+    "row": 73111,
+    "UID": "ES397703369619746391060000003140900477",
+    "confidence": 0.9255,
+    "captured": "IS JUNE",
+    "min_distance": 3,
+    "best_variation": "16June",
+    "similarity": 0.5
+  },
+  {
+    "row": 73112,
+    "UID": "ES397703369619746391160000003140900477",
+    "confidence": 0.9995,
+    "captured": "B",
+    "min_distance": 0,
+    "best_variation": "B",
+    "similarity": 1.0
+  },
+  {
+    "row": 73113,
+    "UID": "ES397703369619746391260000003140900477",
+    "confidence": 0.7026,
+    "captured": "A, C",
+    "min_distance": 3,
+    "best_variation": "C",
+    "similarity": -2.0
+  },
+  {
+    "row": 73114,
+    "UID": "ES397703369619746391360000003140900477",
+    "confidence": 0.8315,
+    "captured": "A",
+    "min_distance": 0,
+    "best_variation": "A",
+    "similarity": 1.0
+  },
+  {
+    "row": 73115,
+    "UID": "ES397703369619746391460000003140900477",
+    "confidence": 0.9916,
+    "captured": "A",
+    "min_distance": 0,
+    "best_variation": "A",
+    "similarity": 1.0
+  },
+  {
+    "row": 73116,
+    "UID": "ES397703369619746391560000003140900477",
+    "confidence": 0.9966,
+    "captured": "B",
+    "min_distance": 1,
+    "best_variation": "C",
+    "similarity": 0.0
+  },
+  {
+    "row": 73117,
+    "UID": "ES397703369619746391660000003140900477",
+    "confidence": 0.9791,
+    "captured": "B",
+    "min_distance": 0,
+    "best_variation": "B",
+    "similarity": 1.0
+  },
+  {
+    "row": 73118,
+    "UID": "ES397703369619746391760000003140900477",
+    "confidence": 0.9998,
+    "captured": "A",
+    "min_distance": 1,
+    "best_variation": "C",
+    "similarity": 0.0
+  },
+  {
+    "row": 73119,
+    "UID": "ES397703369619746391860000003140900477",
+    "confidence": 0.9999,
+    "captured": "A",
+    "min_distance": 0,
+    "best_variation": "A",
+    "similarity": 1.0
+  },
+  {
+    "row": 73120,
+    "UID": "ES397703369619746391960000003140900477",
+    "confidence": 0.9997,
+    "captured": "C",
+    "min_distance": 0,
+    "best_variation": "C",
+    "similarity": 1.0
+  },
+  {
+    "row": 73121,
+    "UID": "ES397703369619746392060000003140900477",
+    "confidence": 0.9802,
+    "captured": "B",
+    "min_distance": 1,
+    "best_variation": "C",
+    "similarity": 0.0
+  },
+  {
+    "row": 73122,
+    "UID": "ES397703369619746392160000003140900477",
+    "confidence": 0.9999,
+    "captured": "F",
+    "min_distance": 0,
+    "best_variation": "F",
+    "similarity": 1.0
+  },
+  {
+    "row": 73123,
+    "UID": "ES397703369619746392260000003140900477",
+    "confidence": 0.9998,
+    "captured": "D",
+    "min_distance": 0,
+    "best_variation": "D",
+    "similarity": 1.0
+  },
+  {
+    "row": 73124,
+    "UID": "ES397703369619746392360000003140900477",
+    "confidence": 0.9998,
+    "captured": "E",
+    "min_distance": 0,
+    "best_variation": "E",
+    "similarity": 1.0
+  },
+  {
+    "row": 73125,
+    "UID": "ES397703369619746392460000003140900477",
+    "confidence": 0.9999,
+    "captured": "B",
+    "min_distance": 0,
+    "best_variation": "B",
+    "similarity": 1.0
+  },
+  {
+    "type": "info",
+    "message": "[2026-07-23 08:13:13] Finished minimum distance calculation in 68.64 seconds"
+  }
+]
