@@ -1,0 +1,13 @@
+output/
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# Large local datasets (keep lightweight mapping file tracked)
+data/hitl/
+data/human.csv
+data/no_human.csv
+data/all_no_human.csv
+data/lm.csv
+data/main_data.csv
+data/ranged/
