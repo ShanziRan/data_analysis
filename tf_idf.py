@@ -9,6 +9,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from tools.answer_parsing import expand_answer_variations, is_mcq_answer_key
 from tools.question_type import (
     add_inferred_question_type_column,
+    filter_by_language_group,
     filter_by_part_number,
     filter_by_pos,
 )
@@ -64,19 +65,25 @@ def run_tfidf_analysis(
     skipped_rows=None,
     part_numbers=None,
     pos_values=None,
+    language_groups=None,
     include_unmapped_part_number=False,
     part_number_csv_path='data/part_number.csv',
 ):
+    run_started_at = time.strftime('%Y-%m-%d %H:%M:%S')
     output_log = []
     output_dir = Path('output')
-    output_dir.mkdir(exist_ok=True)
     file_suffix = ''
     if part_numbers:
         file_suffix = '_part_' + '_'.join(_suffix_token(value) for value in part_numbers)
     if pos_values:
         file_suffix = f"{file_suffix}_pos_" + '_'.join(_suffix_token(value) for value in pos_values)
-    output_path = output_dir / f'vector/new_data/tfidf_{row_start}_{row_end}_human{file_suffix}.json'
-    row_csv_path = output_dir / f'vector/new_data/tfidf_{row_start}_{row_end}_human{file_suffix}.csv'
+    if language_groups:
+        file_suffix = f"{file_suffix}_lang_" + '_'.join(_suffix_token(value) for value in language_groups)
+    run_id = f"run_{time.strftime('%Y%m%d_%H%M%S')}_{int((time.time() % 1) * 1000):03d}{file_suffix}"
+    run_dir = output_dir / 'vector/new_data' / run_id
+    run_dir.mkdir(parents=True, exist_ok=True)
+    output_path = run_dir / 'tfidf_analysis_info.json'
+    row_csv_path = run_dir / 'tfidf_analysis_rows.csv'
 
     skip_set = set(skipped_rows or [])
     analysis_columns = [
@@ -127,7 +134,18 @@ def run_tfidf_analysis(
         print(message)
         output_log.append({'type': 'info', 'message': message})
 
+    if language_groups:
+        pre_filter_count = len(selected_rows)
+        selected_rows = filter_by_language_group(selected_rows, language_groups)
+        message = (
+            f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Language-group filter enabled ({language_groups}): "
+            f"kept {len(selected_rows)} of {pre_filter_count} rows"
+        )
+        print(message)
+        output_log.append({'type': 'info', 'message': message})
+
     selected_answers = selected_rows['ANSWER Key'].dropna()
+    selected_answer_count = len(selected_answers)
 
     expanded_variations = {}
     for idx, answer in selected_answers.items():
@@ -185,28 +203,42 @@ def run_tfidf_analysis(
             f"multiple_choice = {is_multiple_choice}, inferred_question_type = {inferred_question_type}, "
             f"number_variations = {number_variations}"
         )
-        print(message)
-        output_log.append({
-            'row': idx + 2,
-            'UID': uid_value,
-            'confidence': confidence_value,
-            'captured': captured_value,
-            'number_variations': number_variations,
-            'exact_match': exact_match,
-            'exact_matched_variation': exact_matched_variation,
-            'best_variation': best_variation,
-            'max_cosine_similarity': max_cosine_similarity,
-            'multiple_choice': is_multiple_choice,
-            'inferred_question_type': inferred_question_type,
-        })
+        # print(message)
 
     similarity_elapsed = time.perf_counter() - similarity_start
     message = f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Finished TF-IDF cosine similarity calculation in {similarity_elapsed:.2f} seconds"
     print(message)
     output_log.append({'type': 'info', 'message': message})
 
+    run_ended_at = time.strftime('%Y-%m-%d %H:%M:%S')
+    summary_payload = {
+        'run_started_at': run_started_at,
+        'run_ended_at': run_ended_at,
+        'settings': {
+            'row_start': row_start,
+            'row_end': row_end,
+            'part_numbers': part_numbers,
+            'pos_values': pos_values,
+            'language_groups': language_groups,
+            'include_unmapped_part_number': include_unmapped_part_number,
+            'part_number_csv_path': part_number_csv_path,
+            'skipped_rows_count': len(skip_set),
+        },
+        'counts': {
+            'selected_rows_after_filters': len(selected_rows),
+            'selected_answers_non_null': selected_answer_count,
+            'processed_rows': len(expanded_variations),
+        },
+        'timings_seconds': {
+            'answer_key_processing': round(answer_key_elapsed, 4),
+            'similarity_calculation': round(similarity_elapsed, 4),
+            'total': round(answer_key_elapsed + similarity_elapsed, 4),
+        },
+        'messages': output_log,
+    }
+
     with output_path.open('w', encoding='utf-8') as handle:
-        json.dump(output_log, handle, indent=2, ensure_ascii=False)
+        json.dump(summary_payload, handle, indent=2, ensure_ascii=False)
 
     print(f'Saved output log to {output_path}')
 
@@ -227,6 +259,7 @@ ROW_END = 334034
 SKIP_ROWS = []
 PART_NUMBERS = None  # Optional list, e.g. ['1'] or ['1', '2']
 POS_SELECTION = None  # Optional list, e.g. ['822/03'] or ['D822/03']
+LANGUAGE_GROUPS = None  # Optional list, e.g. ['ENGLISH', 'HINDI']
 INCLUDE_UNMAPPED_PART_NUMBER = False
 
 run_tfidf_analysis(
@@ -235,5 +268,6 @@ run_tfidf_analysis(
     skipped_rows=SKIP_ROWS,
     part_numbers=PART_NUMBERS,
     pos_values=POS_SELECTION,
+    language_groups=LANGUAGE_GROUPS,
     include_unmapped_part_number=INCLUDE_UNMAPPED_PART_NUMBER,
 )

@@ -172,6 +172,7 @@ if __name__ == '__main__':
     SUMMARY_JSON_NAME = 'char_change_summary.json'
     POS_VALUES = ['D432/01']  # Example: ['822/03', 'D441/01'] or None
     PART_NUMBERS = ['4']  # Example: ['1', '2'] or None
+    LANGUAGE_GROUPS = ['Romance']  # Example: ['english', 'welsh'] or None
     # POS_VALUES = ['D432/01']  # Example: ['822/03', 'D441/01'] or None
     # PART_NUMBERS = ['2', '3']  # Example: ['1', '2'] or None
     INCLUDE_UNMAPPED_PART_NUMBER = False
@@ -184,6 +185,7 @@ if __name__ == '__main__':
         summary_json_name=SUMMARY_JSON_NAME,
         pos_values=POS_VALUES,
         part_numbers=PART_NUMBERS,
+        language_groups=LANGUAGE_GROUPS,
         include_unmapped_part_number=INCLUDE_UNMAPPED_PART_NUMBER,
         part_number_csv_path=PART_NUMBER_CSV_PATH,
     )

@@ -292,34 +292,20 @@ def plot_language_group_total_counts(json_paths, output_path, top_n=40):
     if not language_group_change_counts:
         raise ValueError('No language-group change counts could be computed from the supplied JSON paths.')
 
-    aggregate = Counter()
-    for counts in language_group_change_counts.values():
-        aggregate.update(counts)
-
-    if top_n is None or top_n <= 0:
-        selected_changes = sorted(aggregate.keys())
-    else:
-        ranked = sorted(aggregate.items(), key=lambda item: (-item[1], item[0]))
-        selected_changes = [change for change, _ in ranked[:top_n]]
-
-    if not selected_changes:
-        raise ValueError('No character changes found after aggregation.')
-
     sorted_groups = sorted(
         language_group_change_counts.keys(),
         key=lambda group: (-sum(language_group_change_counts[group].values()), group),
     )
 
-    n_change_labels = len(selected_changes)
-    x = np.arange(n_change_labels)
+    all_group_total = sum(sum(counts.values()) for counts in language_group_change_counts.values())
 
     n_subplots = len(sorted_groups)
     n_cols = 2 if n_subplots > 1 else 1
     n_rows = int(np.ceil(n_subplots / n_cols))
 
-    fig_width = max(16, n_change_labels * 0.35)
+    fig_width = max(16, (top_n or 40) * 0.35)
     fig_height = max(6, n_rows * 4.5)
-    fig, axes = plt.subplots(n_rows, n_cols, figsize=(fig_width, fig_height), sharex=True, sharey=True)
+    fig, axes = plt.subplots(n_rows, n_cols, figsize=(fig_width, fig_height))
     axes = np.atleast_1d(axes).ravel()
 
     cmap = plt.get_cmap('tab20', n_subplots)
@@ -327,22 +313,32 @@ def plot_language_group_total_counts(json_paths, output_path, top_n=40):
     for idx, group in enumerate(sorted_groups):
         ax = axes[idx]
         counts = language_group_change_counts[group]
-        y_values = [counts.get(change, 0) for change in selected_changes]
+        group_total = sum(counts.values())
+        ranked_changes = sorted(counts.items(), key=lambda item: (-item[1], item[0]))
+        if top_n is not None and top_n > 0:
+            ranked_changes = ranked_changes[:top_n]
+        selected_changes = [change for change, _ in ranked_changes]
+        x = np.arange(len(selected_changes))
+
+        if group_total == 0:
+            y_values = [0.0] * len(selected_changes)
+        else:
+            values = [counts.get(change, 0) for change in selected_changes]
+            y_values = [value / group_total * 100.0 for value in values]
 
         ax.bar(x, y_values, width=0.8, color=cmap(idx))
-        ax.set_title(group)
-        ax.set_ylabel('Count')
+        ax.set_title(f'{group} ({group_total})')
+        ax.set_ylabel('% of group total')
+        ax.set_ylim(0, 100.0)
         ax.grid(axis='y', alpha=0.25)
-
-    for idx in range(n_subplots, len(axes)):
-        axes[idx].axis('off')
-
-    for ax in axes[:n_subplots]:
         ax.set_xticks(x)
         ax.set_xticklabels(selected_changes, rotation=75, ha='right')
         ax.set_xlabel('Character change')
 
-    fig.suptitle('Character Change Counts by Language Group (Summed Across Runs)', y=1.02)
+    for idx in range(n_subplots, len(axes)):
+        axes[idx].axis('off')
+
+    fig.suptitle('Top Character Change Types by Language Group', y=1.02)
     fig.tight_layout()
 
     output_path = Path(output_path)
@@ -350,31 +346,32 @@ def plot_language_group_total_counts(json_paths, output_path, top_n=40):
     fig.savefig(output_path, dpi=160)
     plt.close(fig)
 
-    print('Language-group totals for selected character changes:')
+    print('Language-group totals (character changes):')
     for group in sorted_groups:
         counts = language_group_change_counts[group]
-        total = sum(counts.get(change, 0) for change in selected_changes)
-        print(f'- {group}: {total}')
-    print(f'Saved language-group grouped-change plot to {output_path}')
+        group_total = sum(counts.values())
+        print(f'- {group}: {group_total}')
+    print(f'- All groups: {all_group_total}')
+    print(f'Saved language-group percentage plot to {output_path}')
 
 
 def main():
     # Direct-run configuration
-    JSON_PATHS = [
-        'output/char_error/new_data/run_20260807_113813_297_part_2_pos_d441-03/char_change_summary_part_2_pos_d441-03.json',
-        'output/char_error/new_data/run_20260807_114901_942_part_2_3_pos_d441-01/char_change_summary_part_2_3_pos_d441-01.json',
-        'output/char_error/new_data/run_20260807_115000_542_part_2_3_pos_d432-01/char_change_summary_part_2_3_pos_d432-01.json',
-    ]
     # JSON_PATHS = [
-    #     'output/char_error/new_data/run_20260807_115036_095_part_4_pos_d432-01/char_change_summary_part_4_pos_d432-01.json',
-    #     'output/char_error/new_data/run_20260807_115111_485_part_4_pos_d441-01/char_change_summary_part_4_pos_d441-01.json',
-    #     'output/char_error/new_data/run_20260807_115142_396_part_2_pos_d822-03/char_change_summary_part_2_pos_d822-03.json',
+    #     'output/char_error/new_data/run_20260807_113813_297_part_2_pos_d441-03/char_change_summary_part_2_pos_d441-03.json',
+    #     'output/char_error/new_data/run_20260807_114901_942_part_2_3_pos_d441-01/char_change_summary_part_2_3_pos_d441-01.json',
+    #     'output/char_error/new_data/run_20260807_115000_542_part_2_3_pos_d432-01/char_change_summary_part_2_3_pos_d432-01.json',
     # ]
+    JSON_PATHS = [
+        'output/char_error/new_data/run_20260807_115036_095_part_4_pos_d432-01/char_change_summary_part_4_pos_d432-01.json',
+        'output/char_error/new_data/run_20260807_115111_485_part_4_pos_d441-01/char_change_summary_part_4_pos_d441-01.json',
+        'output/char_error/new_data/run_20260807_115142_396_part_2_pos_d822-03/char_change_summary_part_2_pos_d822-03.json',
+    ]
     # PLOT_MODE = 'per_change'  # 'per_change', 'operation_type', 'numeric_alpha', or 'language_group_total'
     # PLOT_MODE = 'operation_type'
     # PLOT_MODE = 'numeric_alpha'
     PLOT_MODE = 'language_group_total'
-    OUTPUT_PATH = f'output/char_error/new_data/char_change_counts_{PLOT_MODE}_box.png'
+    OUTPUT_PATH = f'output/char_error/new_data/char_change_counts_{PLOT_MODE}.png'
     TOP_N = 40  # Set to None or <=0 to plot all changes.
 
     if PLOT_MODE == 'per_change':

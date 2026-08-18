@@ -7,6 +7,7 @@ import pandas as pd
 from tools.answer_parsing import expand_answer_variations, is_mcq_answer_key
 from tools.question_type import (
     add_inferred_question_type_column,
+    filter_by_language_group,
     filter_by_part_number,
     filter_by_pos,
 )
@@ -117,6 +118,7 @@ def run_distance_analysis(
     check_human=False,
     part_numbers=None,
     pos_values=None,
+    language_groups=None,
     include_unmapped_part_number=False,
     part_number_csv_path='data/part_number.csv',
 ):
@@ -130,6 +132,9 @@ def run_distance_analysis(
     if pos_values:
         pos_suffix = '_pos_' + '_'.join(_suffix_token(value) for value in pos_values)
         file_suffix = f'{file_suffix}{pos_suffix}'
+    if language_groups:
+        lang_suffix = '_lang_' + '_'.join(_suffix_token(value) for value in language_groups)
+        file_suffix = f'{file_suffix}{lang_suffix}'
     run_id = f"run_{time.strftime('%Y%m%d_%H%M%S')}_{int((time.time() % 1) * 1000):03d}{file_suffix}"
     run_dir = output_dir / 'distance/new_data' / run_id
     run_dir.mkdir(parents=True, exist_ok=True)
@@ -183,6 +188,16 @@ def run_distance_analysis(
         )
         message = (
             f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Part-number filter enabled ({part_numbers}): "
+            f"kept {len(selected_rows)} of {pre_filter_count} rows"
+        )
+        print(message)
+        output_log.append({'type': 'info', 'message': message})
+
+    if language_groups:
+        pre_filter_count = len(selected_rows)
+        selected_rows = filter_by_language_group(selected_rows, language_groups)
+        message = (
+            f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Language-group filter enabled ({language_groups}): "
             f"kept {len(selected_rows)} of {pre_filter_count} rows"
         )
         print(message)
@@ -325,6 +340,7 @@ def run_distance_analysis(
             'check_human': check_human,
             'part_numbers': part_numbers,
             'pos_values': pos_values,
+            'language_groups': language_groups,
             'include_unmapped_part_number': include_unmapped_part_number,
             'part_number_csv_path': part_number_csv_path,
             'skipped_rows_count': len(skip_set),
@@ -361,8 +377,9 @@ if __name__ == '__main__':
     SKIP_ROWS = []  # Example: [12, 85]
     NON_MCQ_ONLY = True
     CHECK_HUMAN = True
-    PART_NUMBERS = ['4']  # Example: ['1', '2']
-    POS_VALUES = ['D432/01']  # Example: ['D822/03', 'D441/01']
+    PART_NUMBERS = None  # Optional list, e.g. ['1', '2']
+    POS_VALUES = None  # Optional list, e.g. ['D822/03', 'D441/01']
+    LANGUAGE_GROUPS = None  # Optional list, e.g. ['ENGLISH', 'HINDI']
     INCLUDE_UNMAPPED_PART_NUMBER = False
     PART_NUMBER_CSV_PATH = 'data/part_number.csv'
 
@@ -374,6 +391,7 @@ if __name__ == '__main__':
         check_human=CHECK_HUMAN,
         part_numbers=PART_NUMBERS,
         pos_values=POS_VALUES,
+        language_groups=LANGUAGE_GROUPS,
         include_unmapped_part_number=INCLUDE_UNMAPPED_PART_NUMBER,
         part_number_csv_path=PART_NUMBER_CSV_PATH,
     )
