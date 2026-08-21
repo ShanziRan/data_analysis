@@ -1,0 +1,44 @@
+{
+  "rows": 10000,
+  "corrections": 236,
+  "correction_rate": 0.0236,
+  "validation_rows": 1984,
+  "validation_average_precision": 0.5135752179568863,
+  "operating_point": {
+    "threshold": 0.688547159594247,
+    "recall": 0.9523809523809523,
+    "precision": 0.21978021978021978,
+    "review_rate": 0.09173387096774194,
+    "false_negatives": 2,
+    "true_positives": 40
+  },
+  "target_recall": 0.95,
+  "group_column": "scan_id",
+  "correction_types": {
+    "no_correction": 9764,
+    "substitution": 109,
+    "mcq_correction": 65,
+    "multiple_edits": 42,
+    "insertion": 11,
+    "deletion": 5,
+    "blank_to_text": 4
+  },
+  "feature_columns": [
+    "ocr_confidence",
+    "edit_similarity",
+    "char_ngram_similarity",
+    "token_similarity",
+    "answer_exact",
+    "is_blank",
+    "is_mcq",
+    "captured_length",
+    "best_answer_length",
+    "length_difference",
+    "digit_fraction",
+    "alpha_fraction",
+    "punctuation_fraction",
+    "variation_count",
+    "known_confusion_score",
+    "known_confusion_fraction"
+  ]
+}

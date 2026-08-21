@@ -1,4 +1,6 @@
-output/
+output/distance
+output/vectors
+output/pipeline
 __pycache__/
 **/__pycache__/
 *.pyc
