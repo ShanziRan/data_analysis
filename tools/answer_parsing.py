@@ -1,5 +1,4 @@
 import re
-
 import pandas as pd
 
 
@@ -39,7 +38,7 @@ def _find_matching(text, start, open_char, close_char):
 	raise ValueError(f'Unbalanced group in answer key: {text}')
 
 
-def _split_top_level_alternatives(text):
+def _split_top_level_alternatives(text, preserve_whitespace=False):
 	parts = []
 	current = []
 	depth = 0
@@ -49,15 +48,17 @@ def _split_top_level_alternatives(text):
 		elif char in '])':
 			depth -= 1
 		elif char == '/' and depth == 0:
-			part = ''.join(current).strip()
-			if part:
+			raw_part = ''.join(current)
+			part = raw_part if preserve_whitespace else raw_part.strip()
+			if part or (preserve_whitespace and raw_part):
 				parts.append(part)
 			current = []
 			continue
 		current.append(char)
 
-	part = ''.join(current).strip()
-	if part:
+	raw_part = ''.join(current)
+	part = raw_part if preserve_whitespace else raw_part.strip()
+	if part or (preserve_whitespace and raw_part):
 		parts.append(part)
 	return parts
 
@@ -165,3 +166,65 @@ def expand_answer_variations(answer_key):
 		if error.partial_variations:
 			return list(dict.fromkeys(v for v in error.partial_variations if v))[:MAX_VARIATIONS]
 		return [text]
+
+
+def _take_unique(values, limit):
+	"""Take at most ``limit`` values in grammar order, without an OCR reference."""
+	result = []
+	seen = set()
+	for value in values:
+		if value is None or value in seen:
+			continue
+		seen.add(value)
+		result.append(value)
+		if len(result) >= limit:
+			break
+	return result
+
+
+def expand_answer_variations_bounded(answer_key, limit=100):
+	"""Expand an answer grammar without materialising its full Cartesian product.
+
+	Expansion is deliberately blind to the captured OCR answer. At every group
+	boundary it retains at most ``limit`` variations in answer-key grammar order.
+	This makes parsing deterministic, cacheable per answer key, and prevents large
+	keys from creating millions of intermediate strings.
+	"""
+	if pd.isna(answer_key):
+		return []
+	text = str(answer_key).strip()
+	if not text:
+		return []
+	limit = max(1, int(limit))
+
+	def expand_fragment(fragment):
+		alternatives = _split_top_level_alternatives(fragment, preserve_whitespace=True)
+		all_values = []
+		for alternative in alternatives:
+			values = ['']
+			idx = 0
+			while idx < len(alternative):
+				if alternative[idx] in '[(':
+					opening = alternative[idx]
+					closing = ']' if opening == '[' else ')'
+					end = _find_matching(alternative, idx, opening, closing)
+					group = expand_fragment(alternative[idx + 1:end])
+					if opening == '(':
+						group = [''] + group
+					values = _take_unique(
+						(prefix + option for prefix in values for option in group),
+						limit,
+					)
+					idx = end + 1
+				else:
+					end = idx
+					while end < len(alternative) and alternative[end] not in '[(':
+						end += 1
+					literal = alternative[idx:end]
+					values = _take_unique((value + literal for value in values), limit)
+					idx = end
+			all_values.extend(values)
+			all_values = _take_unique(all_values, limit)
+		return all_values
+
+	return _take_unique(expand_fragment(text), limit)

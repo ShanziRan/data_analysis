@@ -1,4 +1,6 @@
 import argparse
+import re
+import time
 from pathlib import Path
 
 import pandas as pd
@@ -21,6 +23,20 @@ def read_csv_with_fallback_encodings(csv_path):
 
 def _text(value):
 	return '' if pd.isna(value) else str(value).strip()
+
+
+def classify_mcq(captured_value, answer_key):
+	captured_norm = captured_value.casefold()
+	answer_norm = _text(answer_key).casefold()
+	if not captured_value or captured_norm == '--blank--':
+		return 'mcq_no_answer'
+
+	answer_tokens = re.findall(r'\b[A-Za-z]\b', captured_value)
+	if len(answer_tokens) > 1:
+		return 'mcq_multiple_answers'
+	if captured_norm == answer_norm:
+		return 'mcq_exact_match'
+	return 'mcq_incorrect'
 
 
 def _distance_metrics(captured_value, accepted_answers, answer_key):
@@ -61,15 +77,21 @@ def _distance_metrics(captured_value, accepted_answers, answer_key):
 def classify_risk(exact_match, normalised_similarity, cosine_similarity):
 	if exact_match:
 		return 'exact_match'
-	if normalised_similarity is None or cosine_similarity is None:
+	if cosine_similarity is None:
+		return 'check_for_spelling'
+	if normalised_similarity is None:
 		return 'unclassified'
-	if normalised_similarity < 0.8 and cosine_similarity < 0.8:
+	if (normalised_similarity < 0.8) != (cosine_similarity < 0.8):
 		return 'high_risk'
-	if normalised_similarity < 0.8 and cosine_similarity > 0.8:
-		return 'medium_risk'
-	if normalised_similarity >= 0.8 and cosine_similarity >= 0.8:
-		return 'low_risk'
-	return 'review'
+	return 'low_risk'
+
+
+def print_progress(current_row, total_rows):
+	print(f'\rProcessing rows: {current_row}/{total_rows}\033[K', end='', flush=True)
+
+
+def print_loading(message):
+	print(f'\r{message}\033[K', end='', flush=True)
 
 
 def run_pipeline(input_path, output_path, captured_column, answer_column, glove_model_name):
@@ -84,6 +106,22 @@ def run_pipeline(input_path, output_path, captured_column, answer_column, glove_
 		captured_value = _text(row[captured_column])
 		answer_key = row[answer_column]
 		accepted_answers = expand_answer_variations(answer_key)
+		is_multiple_choice = is_mcq_answer_key(answer_key)
+
+		if is_multiple_choice:
+			results.append({
+				'exact_match': captured_value.casefold() == _text(answer_key).casefold(),
+				'exact_matched_variation': _text(answer_key) if captured_value.casefold() == _text(answer_key).casefold() else None,
+				'best_distance_variation': None,
+				'min_distance': None,
+				'normalised_similarity': None,
+				'best_word2vec_variation': None,
+				'max_cosine_similarity': None,
+				'risk_class': classify_mcq(captured_value, answer_key),
+			})
+			print_progress(len(results), len(data))
+			continue
+
 		(
 			exact_match,
 			exact_matched_variation,
@@ -100,7 +138,7 @@ def run_pipeline(input_path, output_path, captured_column, answer_column, glove_
 			max_cosine_similarity = 0.0
 		elif accepted_answers and captured_value:
 			if model is None:
-				print(f'Loading pretrained GloVe model: {glove_model_name}')
+				print_loading(f'Loading pretrained GloVe model: {glove_model_name}')
 				model = load_pretrained_glove_model(glove_model_name)
 			best_word2vec_variation, max_cosine_similarity = best_word2vec_cosine_match(
 				captured_value,
@@ -121,8 +159,9 @@ def run_pipeline(input_path, output_path, captured_column, answer_column, glove_
 			'max_cosine_similarity': max_cosine_similarity,
 			'risk_class': classify_risk(exact_match, normalised_similarity, max_cosine_similarity),
 		})
-		print(f'Processed row {index + 2} of {len(data)}')
+		print_progress(len(results), len(data))
 
+	print()
 	result_data = pd.concat([data, pd.DataFrame(results, index=data.index)], axis=1)
 	output_path.parent.mkdir(parents=True, exist_ok=True)
 	result_data.to_csv(output_path, index=False)
@@ -147,8 +186,9 @@ def parse_args():
 
 if __name__ == '__main__':
 	arguments = parse_args()
-	output_csv = arguments.output_csv or arguments.input_csv.with_name(
-		f'{arguments.input_csv.stem}_scored.csv'
+	input_type = 'human' if arguments.input_csv.stem.casefold() == 'human' else 'no_human'
+	output_csv = arguments.output_csv or (
+		Path('output') / 'pipeline' / f'pipeline_{input_type}_{time.strftime("%Y%m%d_%H%M%S")}.csv'
 	)
 	run_pipeline(
 		input_path=arguments.input_csv,
