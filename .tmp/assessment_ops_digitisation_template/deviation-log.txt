@@ -1,0 +1,3 @@
+- Slides 4, 6, 7, 9 and 11 replace inherited source images with process/chart crops from the already approved monitoring deck.
+- Slides 3, 10 and 14 rewrite inherited source tables for the current pipeline evidence.
+- Repeated source layouts are intentional because the source deck contains six layout patterns and the output contains fifteen slides.

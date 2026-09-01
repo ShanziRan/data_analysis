@@ -1,0 +1,2 @@
+# Optional dependency for whole-answer semantic AK-coverage scoring.
+sentence-transformers>=3.0

@@ -1,0 +1,1075 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/5eicyi",
+    "id": "5eicyi",
+    "slide": 3,
+    "layoutId": "/ppt/slideLayouts/slideLayout9.xml",
+    "layoutName": "Title and Content",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Cambridge",
+    "colors": {
+      "accent1": "#36C4BC",
+      "accent2": "#3B1266",
+      "accent3": "#5665F8",
+      "accent4": "#E94CC1",
+      "accent5": "#FF6637",
+      "accent6": "#FACB2E",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#4B5057",
+      "lt2": "#E8ECEC",
+      "hlink": "#3345DE",
+      "folHlink": "#3B1266"
+    },
+    "fontScheme": {
+      "name": "Custom 1",
+      "majorFont": {
+        "latinTypeface": "Georgia"
+      },
+      "minorFont": {
+        "latinTypeface": "Arial"
+      }
+    },
+    "typefaces": [
+      "Arial",
+      "Georgia"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout9.xml",
+      "name": "Title and Content",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout9.xml/9",
+          "id": "9",
+          "name": "Title 1",
+          "bbox": [
+            35.17,
+            132.28,
+            1209.67,
+            56.22
+          ],
+          "text": "Click to edit Master title style",
+          "textPreview": "Click to edit Master title style",
+          "resolvedTextStyle": {
+            "wrap": "square",
+            "autoFit": "resizeShapeToFitText",
+            "insets": {
+              "right": 0,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master title style",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master title style",
+                  "typeface": "Arial"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout9.xml/3",
+          "id": "3",
+          "name": "Content Placeholder 2",
+          "bbox": [
+            35.17,
+            188.51,
+            1209.67,
+            490.93
+          ],
+          "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level",
+          "textPreview": "Click to edit Master text styles | Second level | Third level | Fourth level | Fifth level",
+          "resolvedTextStyle": {
+            "insets": {
+              "top": 18.9,
+              "right": 0,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master text styles",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master text styles",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "Second level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Second level",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "Third level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Third level",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "Fourth level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fourth level",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "Fifth level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fifth level",
+                  "typeface": "Arial"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout9.xml/11",
+          "id": "11",
+          "name": "Footer Placeholder 3",
+          "bbox": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "order": 4,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout9.xml/12",
+          "id": "12",
+          "name": "Slide Number Placeholder 4",
+          "bbox": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›",
+                  "typeface": "Arial"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout9.xml/13",
+          "id": "13",
+          "name": "Logo 15",
+          "bbox": [
+            35.17,
+            35.15,
+            151.18,
+            25.31
+          ],
+          "contentType": "image/png",
+          "imageCrop": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "asset": {
+            "assetId": "/ppt/media/image5.png",
+            "contentType": "image/png",
+            "byteLength": 14695
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image5.png",
+            "contentType": "image/png",
+            "byteLength": 14695
+          }
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/6",
+          "id": "6",
+          "name": "Slide Number Placeholder 4",
+          "bbox": [
+            1157.83,
+            35,
+            87,
+            21.82
+          ],
+          "geometry": "rect",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "vertical": 1,
+            "verticalAlignment": "top",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          }
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/2",
+          "id": "2",
+          "name": "Title Placeholder 1",
+          "bbox": [
+            35.17,
+            132.28,
+            1209.67,
+            65.61
+          ],
+          "geometry": "rect",
+          "text": "Click to edit Master title style",
+          "textPreview": "Click to edit Master title style",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "vertical": 1,
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "resizeShapeToFitText",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 18.9,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master title style",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master title style",
+                  "typeface": "Arial"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/3",
+          "id": "3",
+          "name": "Text Placeholder 2",
+          "bbox": [
+            35.17,
+            197.9,
+            1209.67,
+            486.27
+          ],
+          "geometry": "rect",
+          "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level",
+          "textPreview": "Click to edit Master text styles | Second level | Third level | Fourth level | Fifth level",
+          "resolvedTextStyle": {
+            "vertical": 1,
+            "wrap": "square",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 18.9,
+              "right": 0,
+              "bottom": 7.56,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master text styles",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master text styles",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "Second level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Second level",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "Third level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Third level",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "Fourth level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fourth level",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "Fifth level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fifth level",
+                  "typeface": "Arial"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/5",
+          "id": "5",
+          "name": "Footer Placeholder 3",
+          "bbox": [
+            35.17,
+            699.21,
+            597.32,
+            20.79
+          ],
+          "geometry": "rect",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "vertical": 1,
+            "verticalAlignment": "top",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/g7ml0v6x",
+      "id": "7",
+      "name": "Title 1",
+      "bbox": [
+        35.17,
+        132.28,
+        1209.67,
+        65.61
+      ],
+      "text": "Current run: a controlled queue of 3.95% for review",
+      "textPreview": "Current run: a controlled queue of 3.95% for review",
+      "resolvedFontSize": 42.67,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "vertical": 1,
+        "fontSize": 42.67,
+        "typeface": "Georgia",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 18.9,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Current run: a controlled queue of 3.95% for review"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Current run: a controlled queue of 3.95% for review",
+          "resolvedTextStyle": {
+            "typeface": "Arial"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Current",
+              "typeface": "Arial"
+            },
+            {
+              "index": 2,
+              "text": " run: a ",
+              "typeface": "Arial"
+            },
+            {
+              "index": 3,
+              "text": "controlled",
+              "typeface": "Arial"
+            },
+            {
+              "index": 4,
+              "text": " queue ",
+              "typeface": "Arial"
+            },
+            {
+              "index": 5,
+              "text": "of 3.95% for review",
+              "typeface": "Arial"
+            }
+          ],
+          "bulletCharacter": "",
+          "lineSpacingPercent": 90000
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3udkba5o",
+      "id": "8",
+      "name": "Content Placeholder 2",
+      "bbox": [
+        35.17,
+        188.51,
+        1112.94,
+        490.93
+      ],
+      "text": "The validation recall is 0.98. Results on the >0.85 cohort describe queue size only: those rows are not yet verified ground truth.",
+      "textPreview": "The validation recall is 0.98. Results on the >0.85 cohort describe queue size only: those rows are not yet verified ground truth.",
+      "resolvedFontSize": 37.33,
+      "resolvedTextStyle": {
+        "vertical": 1,
+        "fontSize": 37.33,
+        "typeface": "Arial",
+        "color": "#4B5057",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 18.9,
+          "right": 0,
+          "bottom": 7.56,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The validation recall is 0.98. Results on the >0.85 cohort describe queue size only: those rows"
+          },
+          {
+            "index": 2,
+            "text": "are not yet verified ground truth."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The validation recall is 0.98. Results on the >0.85 cohort describe queue size only: those rows are not yet verified ground truth.",
+          "resolvedTextStyle": {
+            "typeface": "Arial",
+            "color": "#000000"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "The validation ",
+              "fontSize": 26.67,
+              "typeface": "Arial",
+              "color": "#000000"
+            },
+            {
+              "index": 2,
+              "text": "recall is 0.98",
+              "fontSize": 26.67,
+              "typeface": "Arial",
+              "color": "#000000"
+            },
+            {
+              "index": 3,
+              "text": ". Results on the >0.85 cohort describe queue size only: those rows are not yet verified ground truth.",
+              "fontSize": 26.67,
+              "typeface": "Arial",
+              "color": "#000000"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 100000
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/f6dk7q5s",
+      "id": "4",
+      "name": "Slide Number Placeholder 4",
+      "bbox": [
+        1157.83,
+        35,
+        87,
+        21.82
+      ],
+      "text": "3",
+      "textPreview": "3",
+      "resolvedFontSize": 10.67,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "vertical": 1,
+        "fontSize": 10.67,
+        "typeface": "Arial",
+        "color": "#4B5057",
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "3"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "3",
+          "lineSpacingPercent": 100000,
+          "resolvedTextStyle": {
+            "typeface": "Arial",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "3",
+              "fontSize": 10.67,
+              "typeface": "Arial",
+              "color": "#4B5057",
+              "textTransform": "none"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/b6x83qxw",
+      "id": "9",
+      "name": "Table 2",
+      "bbox": [
+        73.52,
+        295.39,
+        1036.23,
+        155.73
+      ],
+      "text": "Measure | Updated result | Context\nValidation operating point | 98.0% recall\n25.0% precision | 8.84% reviewed\n30 corrections missed\n>0.85 OCR queue | 5,477 rows\n3.95% | Unreviewed scoring estimate\nAK / combined queue | 193 AK candidates\n5,501 combined | 0.14% AK\n3.96% combined",
+      "textPreview": "Measure | Updated result | Context | Validation operating point | 98.0% recall | 25.0% precision | 8.84% reviewed | 30 corrections missed...",
+      "rows": 4,
+      "cols": 3,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            73.52,
+            295.39,
+            345.41,
+            38.93
+          ],
+          "text": "Measure",
+          "textPreview": "Measure",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Measure",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Measure"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            418.93,
+            295.39,
+            345.41,
+            38.93
+          ],
+          "text": "Updated result",
+          "textPreview": "Updated result",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Updated result",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Updated result"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "bbox": [
+            764.34,
+            295.39,
+            345.41,
+            38.93
+          ],
+          "text": "Context",
+          "textPreview": "Context",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Context",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Context"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            73.52,
+            334.32,
+            345.41,
+            38.93
+          ],
+          "text": "Validation operating point",
+          "textPreview": "Validation operating point",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Validation operating point",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Validation operating point"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            418.93,
+            334.32,
+            345.41,
+            38.93
+          ],
+          "text": "98.0% recall\n25.0% precision",
+          "textPreview": "98.0% recall | 25.0% precision",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "98.0% recall",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "98.0% recall"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "25.0% precision",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "25.0% precision"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 2,
+          "column": 3,
+          "bbox": [
+            764.34,
+            334.32,
+            345.41,
+            38.93
+          ],
+          "text": "8.84% reviewed\n30 corrections missed",
+          "textPreview": "8.84% reviewed | 30 corrections missed",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "8.84% reviewed",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "8.84% reviewed"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "30 corrections missed",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "30 corrections missed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            73.52,
+            373.25,
+            345.41,
+            38.93
+          ],
+          "text": ">0.85 OCR queue",
+          "textPreview": ">0.85 OCR queue",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": ">0.85 OCR queue",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": ">0.85 OCR queue"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            418.93,
+            373.25,
+            345.41,
+            38.93
+          ],
+          "text": "5,477 rows\n3.95%",
+          "textPreview": "5,477 rows | 3.95%",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "5,477 rows",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "5,477 rows"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "3.95%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "3.95%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 3,
+          "column": 3,
+          "bbox": [
+            764.34,
+            373.25,
+            345.41,
+            38.93
+          ],
+          "text": "Unreviewed scoring estimate",
+          "textPreview": "Unreviewed scoring estimate",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Unreviewed scoring estimate",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Unreviewed scoring estimate"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            73.52,
+            412.19,
+            345.41,
+            38.93
+          ],
+          "text": "AK / combined queue",
+          "textPreview": "AK / combined queue",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "AK / combined queue",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "AK / combined queue"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            418.93,
+            412.19,
+            345.41,
+            38.93
+          ],
+          "text": "193 AK candidates\n5,501 combined",
+          "textPreview": "193 AK candidates | 5,501 combined",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "193 AK candidates",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "193 AK candidates"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "5,501 combined",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "5,501 combined"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "row": 4,
+          "column": 3,
+          "bbox": [
+            764.34,
+            412.19,
+            345.41,
+            38.93
+          ],
+          "text": "0.14% AK\n3.96% combined",
+          "textPreview": "0.14% AK | 3.96% combined",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "0.14% AK",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "0.14% AK"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "3.96% combined",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "3.96% combined"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composeRuns": []
+}

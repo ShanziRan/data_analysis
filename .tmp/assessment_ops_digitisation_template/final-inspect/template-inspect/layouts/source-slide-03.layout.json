@@ -1,0 +1,991 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/ofy9wn61",
+    "id": "ofy9wn61",
+    "slide": 3,
+    "layoutId": "/ppt/slideLayouts/slideLayout9.xml",
+    "layoutName": "Title and Content",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Cambridge",
+    "colors": {
+      "accent1": "#36C4BC",
+      "accent2": "#3B1266",
+      "accent3": "#5665F8",
+      "accent4": "#E94CC1",
+      "accent5": "#FF6637",
+      "accent6": "#FACB2E",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#4B5057",
+      "lt2": "#E8ECEC",
+      "hlink": "#3345DE",
+      "folHlink": "#3B1266"
+    },
+    "fontScheme": {
+      "name": "Custom 1",
+      "majorFont": {
+        "latinTypeface": "Georgia"
+      },
+      "minorFont": {
+        "latinTypeface": "Arial"
+      }
+    },
+    "typefaces": [
+      "Arial",
+      "Georgia"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout9.xml",
+      "name": "Title and Content",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout9.xml/9",
+          "id": "9",
+          "name": "Title 1",
+          "bbox": [
+            35.17,
+            132.28,
+            1209.67,
+            56.22
+          ],
+          "text": "Click to edit Master title style",
+          "textPreview": "Click to edit Master title style",
+          "resolvedTextStyle": {
+            "wrap": "square",
+            "autoFit": "resizeShapeToFitText",
+            "insets": {
+              "right": 0,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master title style",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master title style",
+                  "typeface": "Arial"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout9.xml/3",
+          "id": "3",
+          "name": "Content Placeholder 2",
+          "bbox": [
+            35.17,
+            188.51,
+            1209.67,
+            490.93
+          ],
+          "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level",
+          "textPreview": "Click to edit Master text styles | Second level | Third level | Fourth level | Fifth level",
+          "resolvedTextStyle": {
+            "insets": {
+              "top": 18.9,
+              "right": 0,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master text styles",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master text styles",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "Second level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Second level",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "Third level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Third level",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "Fourth level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fourth level",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "Fifth level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fifth level",
+                  "typeface": "Arial"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout9.xml/11",
+          "id": "11",
+          "name": "Footer Placeholder 3",
+          "bbox": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "order": 4,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout9.xml/12",
+          "id": "12",
+          "name": "Slide Number Placeholder 4",
+          "bbox": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›",
+                  "typeface": "Arial"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout9.xml/13",
+          "id": "13",
+          "name": "Logo 15",
+          "bbox": [
+            35.17,
+            35.15,
+            151.18,
+            25.31
+          ],
+          "contentType": "image/png",
+          "imageCrop": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "asset": {
+            "assetId": "/ppt/media/image5.png",
+            "contentType": "image/png",
+            "byteLength": 14695
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image5.png",
+            "contentType": "image/png",
+            "byteLength": 14695
+          }
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/6",
+          "id": "6",
+          "name": "Slide Number Placeholder 4",
+          "bbox": [
+            1157.83,
+            35,
+            87,
+            21.82
+          ],
+          "geometry": "rect",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "vertical": 1,
+            "verticalAlignment": "top",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          }
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/2",
+          "id": "2",
+          "name": "Title Placeholder 1",
+          "bbox": [
+            35.17,
+            132.28,
+            1209.67,
+            65.61
+          ],
+          "geometry": "rect",
+          "text": "Click to edit Master title style",
+          "textPreview": "Click to edit Master title style",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "vertical": 1,
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "resizeShapeToFitText",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 18.9,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master title style",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master title style",
+                  "typeface": "Arial"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/3",
+          "id": "3",
+          "name": "Text Placeholder 2",
+          "bbox": [
+            35.17,
+            197.9,
+            1209.67,
+            486.27
+          ],
+          "geometry": "rect",
+          "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level",
+          "textPreview": "Click to edit Master text styles | Second level | Third level | Fourth level | Fifth level",
+          "resolvedTextStyle": {
+            "vertical": 1,
+            "wrap": "square",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 18.9,
+              "right": 0,
+              "bottom": 7.56,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master text styles",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master text styles",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "Second level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Second level",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "Third level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Third level",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "Fourth level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fourth level",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "Fifth level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fifth level",
+                  "typeface": "Arial"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/5",
+          "id": "5",
+          "name": "Footer Placeholder 3",
+          "bbox": [
+            35.17,
+            699.21,
+            597.32,
+            20.79
+          ],
+          "geometry": "rect",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "vertical": 1,
+            "verticalAlignment": "top",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pcjqtg36",
+      "id": "7",
+      "name": "Title 1",
+      "bbox": [
+        35.17,
+        132.28,
+        1209.67,
+        65.61
+      ],
+      "text": "Human corrections train OCR review—not AK coverage",
+      "textPreview": "Human corrections train OCR review—not AK coverage",
+      "resolvedFontSize": 42.67,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "vertical": 1,
+        "fontSize": 42.67,
+        "typeface": "Georgia",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 18.9,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Human corrections train OCR review—not AK coverage"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Human corrections train OCR review—not AK coverage",
+          "resolvedTextStyle": {
+            "typeface": "Arial"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Human corrections train OCR review—not AK coverage",
+              "typeface": "Arial"
+            }
+          ],
+          "bulletCharacter": "",
+          "lineSpacingPercent": 90000
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/m5cra54z",
+      "id": "8",
+      "name": "Content Placeholder 2",
+      "bbox": [
+        35.17,
+        188.51,
+        1112.94,
+        490.93
+      ],
+      "text": "Published creates the correction label during training. It is never used as a scoring feature. AK suggestions remain rule-based until reviewed suggestion outcomes are available.",
+      "textPreview": "Published creates the correction label during training. It is never used as a scoring feature. AK suggestions remain rule-based until rev...",
+      "resolvedFontSize": 37.33,
+      "resolvedTextStyle": {
+        "vertical": 1,
+        "fontSize": 37.33,
+        "typeface": "Arial",
+        "color": "#4B5057",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 18.9,
+          "right": 0,
+          "bottom": 7.56,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Published creates the correction label during training. It is never used as a scoring feature. AK"
+          },
+          {
+            "index": 2,
+            "text": "suggestions remain rule-based until reviewed suggestion outcomes are available."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Published creates the correction label during training. It is never used as a scoring feature. AK suggestions remain rule-based until reviewed suggestion outcomes are available.",
+          "resolvedTextStyle": {
+            "typeface": "Arial",
+            "color": "#000000"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Published creates the correction label during training. It is never used as a scoring feature. AK suggestions remain rule-based until reviewed suggestion outcomes are available.",
+              "fontSize": 26.67,
+              "typeface": "Arial",
+              "color": "#000000"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 100000
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/298ryl4v",
+      "id": "4",
+      "name": "Slide Number Placeholder 4",
+      "bbox": [
+        1157.83,
+        35,
+        87,
+        21.82
+      ],
+      "text": "3",
+      "textPreview": "3",
+      "resolvedFontSize": 10.67,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "vertical": 1,
+        "fontSize": 10.67,
+        "typeface": "Arial",
+        "color": "#4B5057",
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "3"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "3",
+          "lineSpacingPercent": 100000,
+          "resolvedTextStyle": {
+            "typeface": "Arial",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "3",
+              "fontSize": 10.67,
+              "typeface": "Arial",
+              "color": "#4B5057",
+              "textTransform": "none"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/u5o7algj",
+      "id": "9",
+      "name": "Table 2",
+      "bbox": [
+        73.52,
+        295.39,
+        1036.23,
+        155.73
+      ],
+      "text": "Training evidence | Current result | Operational meaning\nReviewed rows | 341,190 | Human-verified training population\nCorrections | 7,857 (2.3%) | Rare class receives extra training weight\nValidation split | 67,712 rows | Grouped by scan_id to reduce leakage",
+      "textPreview": "Training evidence | Current result | Operational meaning | Reviewed rows | 341,190 | Human-verified training population | Corrections | 7...",
+      "rows": 4,
+      "cols": 3,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            73.52,
+            295.39,
+            345.41,
+            38.93
+          ],
+          "text": "Training evidence",
+          "textPreview": "Training evidence",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Training evidence",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Training evidence"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            418.93,
+            295.39,
+            345.41,
+            38.93
+          ],
+          "text": "Current result",
+          "textPreview": "Current result",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Current result",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Current result"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "bbox": [
+            764.34,
+            295.39,
+            345.41,
+            38.93
+          ],
+          "text": "Operational meaning",
+          "textPreview": "Operational meaning",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Operational meaning",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Operational meaning"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            73.52,
+            334.32,
+            345.41,
+            38.93
+          ],
+          "text": "Reviewed rows",
+          "textPreview": "Reviewed rows",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Reviewed rows",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Reviewed rows"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            418.93,
+            334.32,
+            345.41,
+            38.93
+          ],
+          "text": "341,190",
+          "textPreview": "341,190",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "341,190",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "341,190"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 2,
+          "column": 3,
+          "bbox": [
+            764.34,
+            334.32,
+            345.41,
+            38.93
+          ],
+          "text": "Human-verified training population",
+          "textPreview": "Human-verified training population",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Human-verified training population",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Human-verified training population"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            73.52,
+            373.25,
+            345.41,
+            38.93
+          ],
+          "text": "Corrections",
+          "textPreview": "Corrections",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Corrections",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Corrections"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            418.93,
+            373.25,
+            345.41,
+            38.93
+          ],
+          "text": "7,857 (2.3%)",
+          "textPreview": "7,857 (2.3%)",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "7,857 (2.3%)",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "7,857 (2.3%)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 3,
+          "column": 3,
+          "bbox": [
+            764.34,
+            373.25,
+            345.41,
+            38.93
+          ],
+          "text": "Rare class receives extra training weight",
+          "textPreview": "Rare class receives extra training weight",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Rare class receives extra training weight",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Rare class receives extra training weight"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            73.52,
+            412.19,
+            345.41,
+            38.93
+          ],
+          "text": "Validation split",
+          "textPreview": "Validation split",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Validation split",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Validation split"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            418.93,
+            412.19,
+            345.41,
+            38.93
+          ],
+          "text": "67,712 rows",
+          "textPreview": "67,712 rows",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "67,712 rows",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "67,712 rows"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "row": 4,
+          "column": 3,
+          "bbox": [
+            764.34,
+            412.19,
+            345.41,
+            38.93
+          ],
+          "text": "Grouped by scan_id to reduce leakage",
+          "textPreview": "Grouped by scan_id to reduce leakage",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Grouped by scan_id to reduce leakage",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Grouped by scan_id to reduce leakage"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composeRuns": []
+}

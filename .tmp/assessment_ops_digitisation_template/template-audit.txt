@@ -1,0 +1,18 @@
+Source: Digitisation_OCR_review_classifier_Applied_AI.pptx
+
+Structure
+- Six source slides using one Cambridge-branded master family.
+- Slide 1 is the purple title treatment.
+- Slides 2 and 6 are title plus body layouts.
+- Slide 3 is title plus a left image and right narrative.
+- Slide 4 is title plus a central workflow image and lower explanatory body.
+- Slide 5 is title plus summary text and an editable three-column table.
+
+Brand and typography
+- Preserve the Cambridge logo, purple title artwork, white content background, page number and source masters/layouts.
+- Preserve inherited font properties and object positions. New copy is shortened to fit inherited slots.
+
+Insertion contract
+- Every output slide duplicates one source slide.
+- Only mapped title, content, image, table and page-number objects are edited.
+- No overlay design or replacement master is introduced.

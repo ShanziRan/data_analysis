@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "checkedAt": "2026-09-01T09:38:07.119Z",
+  "workspace": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template",
+  "finalPptx": "/Users/ranshanzi/Documents/VSCode/data_analysis/output/hitl/Assessment_Operations_OCR_Monitoring_Deck_Digitisation_Template.pptx",
+  "starterPptx": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter.pptx",
+  "mapPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-frame-map.json",
+  "starterLayoutDir": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-layout",
+  "finalLayoutDir": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/final-inspect2/template-inspect/layouts",
+  "editDir": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template",
+  "issueCount": 0,
+  "issues": []
+}

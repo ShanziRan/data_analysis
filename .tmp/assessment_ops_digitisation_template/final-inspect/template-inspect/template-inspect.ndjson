@@ -1,0 +1,67 @@
+{"kind":"slide","id":"sl/y90nupkv","slide":1,"title":"Operating the OCR review and answer-key monitoring pipeline","textShapes":1}
+{"kind":"textbox","id":"sh/ts7md4r2","slide":1,"textChars":59,"textLines":1}
+{"kind":"slide","id":"sl/hwbqtkby","slide":2,"title":"The monitor protects against two different failure modes","textShapes":3}
+{"kind":"textbox","id":"sh/w3i1sfa9","slide":2,"textChars":56,"textLines":1}
+{"kind":"textbox","id":"sh/r65knqtk","slide":2,"textChars":345,"textLines":8}
+{"kind":"textbox","id":"sh/b29kza94","slide":2,"textChars":1,"textLines":1}
+{"kind":"slide","id":"sl/ofy9wn61","slide":3,"title":"Human corrections train OCR review—not AK coverage","textShapes":3}
+{"kind":"textbox","id":"sh/pcjqtg36","slide":3,"textChars":50,"textLines":1}
+{"kind":"textbox","id":"sh/m5cra54z","slide":3,"textChars":177,"textLines":1}
+{"kind":"textbox","id":"sh/298ryl4v","slide":3,"textChars":1,"textLines":1}
+{"kind":"table","id":"tb/u5o7algj","slide":3,"name":"Table 2","rows":4,"cols":3,"preview":"Training evidence | Current result | Operational meaning","bbox":[73.52,295.39,1036.24,240.53]}
+{"kind":"slide","id":"sl/jyx0ra1s","slide":4,"title":"How reviewed corrections train the OCR model","textShapes":3}
+{"kind":"textbox","id":"sh/1cj2d8b6","slide":4,"textChars":44,"textLines":1}
+{"kind":"textbox","id":"sh/ql8jytsj","slide":4,"textChars":1,"textLines":1}
+{"kind":"textbox","id":"sh/3ihk3et8","slide":4,"textChars":210,"textLines":1}
+{"kind":"image","id":"im/z6lc7q1o","slide":4,"name":"","bbox":[172.7,260.44,934.62,169.12]}
+{"kind":"slide","id":"sl/i107q5of","slide":5,"title":"The OCR model combines several weak signals","textShapes":3}
+{"kind":"textbox","id":"sh/032tgr6d","slide":5,"textChars":43,"textLines":1}
+{"kind":"textbox","id":"sh/n6dcr65o","slide":5,"textChars":309,"textLines":10}
+{"kind":"textbox","id":"sh/z2tcnm5s","slide":5,"textChars":1,"textLines":1}
+{"kind":"slide","id":"sl/x8f69ofe","slide":6,"title":"The OCR threshold catches 98% of known corrections","textShapes":3}
+{"kind":"textbox","id":"sh/w32twb6l","slide":6,"textChars":50,"textLines":1}
+{"kind":"textbox","id":"sh/87ipkzal","slide":6,"textChars":1,"textLines":1}
+{"kind":"textbox","id":"sh/yhg7epsj","slide":6,"textChars":247,"textLines":3}
+{"kind":"image","id":"im/8zutsju5","slide":6,"name":"","bbox":[75.35,253.18,542.11,391.53]}
+{"kind":"slide","id":"sl/gnmp4jqx","slide":7,"title":"Scoring separates OCR review from AK coverage","textShapes":3}
+{"kind":"textbox","id":"sh/cb2tkvap","slide":7,"textChars":45,"textLines":1}
+{"kind":"textbox","id":"sh/zedcfa9g","slide":7,"textChars":1,"textLines":1}
+{"kind":"textbox","id":"sh/eh0ba1sr","slide":7,"textChars":150,"textLines":1}
+{"kind":"image","id":"im/6tc3mpoz","slide":7,"name":"","bbox":[350.72,210,578.57,270]}
+{"kind":"slide","id":"sl/fu1gfa1s","slide":8,"title":"Decision 1 prioritises likely OCR corrections","textShapes":3}
+{"kind":"textbox","id":"sh/sjix0zy1","slide":8,"textChars":45,"textLines":1}
+{"kind":"textbox","id":"sh/je9g3ahk","slide":8,"textChars":318,"textLines":10}
+{"kind":"textbox","id":"sh/ri9g7uhw","slide":8,"textChars":1,"textLines":1}
+{"kind":"slide","id":"sl/udsvah03","slide":9,"title":"AK-gap suggestions need semantic evidence and no conflict","textShapes":3}
+{"kind":"textbox","id":"sh/1cfmhgne","slide":9,"textChars":57,"textLines":1}
+{"kind":"textbox","id":"sh/mdonql4z","slide":9,"textChars":1,"textLines":1}
+{"kind":"textbox","id":"sh/bih4na5w","slide":9,"textChars":216,"textLines":1}
+{"kind":"image","id":"im/jutknyd4","slide":9,"name":"","bbox":[250.58,210,778.85,270]}
+{"kind":"slide","id":"sl/m90b6t0r","slide":10,"title":"Semantic similarity alone is not enough","textShapes":3}
+{"kind":"textbox","id":"sh/kzu5c32t","slide":10,"textChars":39,"textLines":1}
+{"kind":"textbox","id":"sh/725onyl4","slide":10,"textChars":172,"textLines":1}
+{"kind":"textbox","id":"sh/zelojyl8","slide":10,"textChars":2,"textLines":1}
+{"kind":"table","id":"tb/32lcre58","slide":10,"name":"Table 2","rows":4,"cols":3,"preview":"Captured | Closest AK variation | Decision","bbox":[73.52,295.39,1036.24,240.53]}
+{"kind":"slide","id":"sl/jetc3ut0","slide":11,"title":"One routed queue, with evidence matched to the reason","textShapes":3}
+{"kind":"textbox","id":"sh/xcryxg7y","slide":11,"textChars":53,"textLines":1}
+{"kind":"textbox","id":"sh/250zy18b","slide":11,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/72t03qp0","slide":11,"textChars":219,"textLines":1}
+{"kind":"image","id":"im/nml0bqh8","slide":11,"name":"","bbox":[210.77,210,858.46,270]}
+{"kind":"slide","id":"sl/8f2psfyx","slide":12,"title":"Structured reviewer outcomes create the next learning loop","textShapes":3}
+{"kind":"textbox","id":"sh/sb2lcnmd","slide":12,"textChars":58,"textLines":1}
+{"kind":"textbox","id":"sh/b6d4f2lc","slide":12,"textChars":388,"textLines":7}
+{"kind":"textbox","id":"sh/ra943il8","slide":12,"textChars":2,"textLines":1}
+{"kind":"slide","id":"sl/hgzapcr6","slide":13,"title":"Monitor quality, workload and drift","textShapes":3}
+{"kind":"textbox","id":"sh/32ponyts","slide":13,"textChars":35,"textLines":1}
+{"kind":"textbox","id":"sh/gzy5s3a1","slide":13,"textChars":328,"textLines":8}
+{"kind":"textbox","id":"sh/o3i5w3ad","slide":13,"textChars":2,"textLines":1}
+{"kind":"slide","id":"sl/6lsnupw7","slide":14,"title":"The latest run routes 3.96% of rows to human review","textShapes":3}
+{"kind":"textbox","id":"sh/kfidonqx","slide":14,"textChars":51,"textLines":1}
+{"kind":"textbox","id":"sh/zi5c3y98","slide":14,"textChars":177,"textLines":1}
+{"kind":"textbox","id":"sh/jepwf2pc","slide":14,"textChars":2,"textLines":1}
+{"kind":"table","id":"tb/7utonm9g","slide":14,"name":"Table 2","rows":4,"cols":3,"preview":"Measure | Latest result | Operational meaning","bbox":[73.52,295.39,1036.24,240.53]}
+{"kind":"slide","id":"sl/vaxsvy10","slide":15,"title":"Agree the operating controls before routine monitoring begins","textShapes":3}
+{"kind":"textbox","id":"sh/s7y5sv2x","slide":15,"textChars":61,"textLines":1}
+{"kind":"textbox","id":"sh/na5476l8","slide":15,"textChars":244,"textLines":1}
+{"kind":"textbox","id":"sh/76p4jqls","slide":15,"textChars":2,"textLines":1}
+{"kind":"notice","message":"Truncated: omitted 0 lines. Increase maxChars or narrow target."}

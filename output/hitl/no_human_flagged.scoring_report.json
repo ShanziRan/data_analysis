@@ -1,0 +1,134 @@
+{
+  "report_type": "scoring",
+  "generated_at_utc": "2026-08-28T10:38:56.612015+00:00",
+  "rows": 138810,
+  "files": {
+    "input_csv": "data/hitl/no_human.csv",
+    "model": "output/hitl/review_model.pkl",
+    "model_sha256": "76f16c253e14b55f7838ca883e7b35458f9a725e47d47fad52ce66cd56b71a24",
+    "output_csv": "output/hitl/no_human_flagged.csv",
+    "report_out": "output/hitl/no_human_flagged.scoring_report.json"
+  },
+  "parameters": {
+    "limit": null,
+    "max_variations": 100,
+    "ocr_threshold": 0.6814229605728909,
+    "artifact_ocr_threshold": 0.6814229605728909,
+    "ocr_threshold_overridden": false,
+    "ak_coverage_enabled": true,
+    "semantic_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "ak_semantic_threshold": 0.75,
+    "ak_surface_threshold": 0.6,
+    "ak_min_semantic_surface_gap": 0.15,
+    "ak_single_phrase_threshold": 0.78,
+    "ak_multiword_threshold": 0.8,
+    "semantic_batch_size": 64,
+    "semantic_chunk_size": 2000,
+    "evaluate_with_published": false
+  },
+  "data_profile": {
+    "mcq_rows": 94681,
+    "blank_rows": 1285,
+    "exact_answer_rows": 92200,
+    "ak_eligible_rows": 17933
+  },
+  "ocr_review": {
+    "flagged_rows": 5477,
+    "flagged_rate": 0.039456811468914346,
+    "risk_label_counts": {
+      "low": 133333,
+      "medium": 4229,
+      "high": 1248
+    },
+    "predicted_correction_type_counts": {
+      "no_correction": 133333,
+      "insertion": 2077,
+      "text_to_blank": 1236,
+      "deletion": 1016,
+      "mcq_correction": 566,
+      "substitution": 536,
+      "multiple_edits": 46
+    },
+    "probability_summary": {
+      "count": 138810,
+      "min": 0.248895517055088,
+      "mean": 0.33991139869407283,
+      "median": 0.27442555949171765,
+      "max": 0.9607777336767779
+    },
+    "ground_truth_metrics": null
+  },
+  "answer_key_coverage": {
+    "semantically_scored_rows": 17933,
+    "flagged_rows": 193,
+    "flagged_rate_all_rows": 0.0013903897413731,
+    "flagged_rate_eligible_rows": 0.010762281826799754,
+    "label_counts": {
+      "no_ak_gap_signal": 120877,
+      "blocked_by_conflict": 11230,
+      "semantic_below_threshold": 3287,
+      "surface_match_existing_ak": 3223,
+      "possible_answer_key_gap": 193
+    },
+    "conflict_rows": 11230,
+    "conflict_reason_counts": {
+      "single_token_substitution": 8347,
+      "key_term_mismatch": 1044,
+      "number_mismatch": 886,
+      "single_token_substitution;number_mismatch": 436,
+      "negation_mismatch": 197,
+      "single_token_substitution;negation_mismatch": 127,
+      "single_token_substitution;date_or_time_mismatch": 109,
+      "number_mismatch;key_term_mismatch": 64,
+      "number_mismatch;date_or_time_mismatch": 7,
+      "number_mismatch;negation_mismatch": 4,
+      "date_or_time_mismatch": 3,
+      "negation_mismatch;key_term_mismatch": 2,
+      "single_token_substitution;number_mismatch;negation_mismatch": 2,
+      "date_or_time_mismatch;key_term_mismatch": 1,
+      "number_mismatch;negation_mismatch;measurement_unit_mismatch": 1
+    },
+    "semantic_similarity_summary": {
+      "count": 17933,
+      "min": -0.0004891399294137955,
+      "mean": 0.5656094977698951,
+      "median": 0.5365673303604126,
+      "max": 1.0
+    },
+    "semantic_surface_gap_summary": {
+      "count": 17933,
+      "min": -0.7863368796450751,
+      "mean": 0.05042226785971212,
+      "median": 0.05882352941176472,
+      "max": 0.7986602783203125
+    }
+  },
+  "combined_review_queue": {
+    "flagged_rows": 5501,
+    "flagged_rate": 0.03962970967509545,
+    "review_reason_counts": {
+      "none": 133309,
+      "ocr_correction": 5308,
+      "ocr_and_answer_key": 169,
+      "possible_answer_key_gap": 24
+    }
+  },
+  "feature_columns": [
+    "ocr_confidence",
+    "edit_similarity",
+    "char_ngram_similarity",
+    "token_similarity",
+    "answer_exact",
+    "is_blank",
+    "is_mcq",
+    "captured_length",
+    "best_answer_length",
+    "length_difference",
+    "digit_fraction",
+    "alpha_fraction",
+    "punctuation_fraction",
+    "variation_count",
+    "known_confusion_score",
+    "known_confusion_fraction"
+  ]
+}

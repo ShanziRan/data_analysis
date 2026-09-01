@@ -1,0 +1,841 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/hgzapcr6",
+    "id": "hgzapcr6",
+    "slide": 13,
+    "layoutId": "/ppt/slideLayouts/slideLayout9.xml",
+    "layoutName": "Title and Content",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Cambridge",
+    "colors": {
+      "accent1": "#36C4BC",
+      "accent2": "#3B1266",
+      "accent3": "#5665F8",
+      "accent4": "#E94CC1",
+      "accent5": "#FF6637",
+      "accent6": "#FACB2E",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#4B5057",
+      "lt2": "#E8ECEC",
+      "hlink": "#3345DE",
+      "folHlink": "#3B1266"
+    },
+    "fontScheme": {
+      "name": "Custom 1",
+      "majorFont": {
+        "latinTypeface": "Georgia"
+      },
+      "minorFont": {
+        "latinTypeface": "Arial"
+      }
+    },
+    "typefaces": [
+      "Arial",
+      "Georgia"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout9.xml",
+      "name": "Title and Content",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout9.xml/9",
+          "id": "9",
+          "name": "Title 1",
+          "bbox": [
+            35.17,
+            132.28,
+            1209.67,
+            56.22
+          ],
+          "text": "Click to edit Master title style",
+          "textPreview": "Click to edit Master title style",
+          "resolvedTextStyle": {
+            "wrap": "square",
+            "autoFit": "resizeShapeToFitText",
+            "insets": {
+              "right": 0,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master title style",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master title style",
+                  "typeface": "Arial"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout9.xml/3",
+          "id": "3",
+          "name": "Content Placeholder 2",
+          "bbox": [
+            35.17,
+            188.51,
+            1209.67,
+            490.93
+          ],
+          "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level",
+          "textPreview": "Click to edit Master text styles | Second level | Third level | Fourth level | Fifth level",
+          "resolvedTextStyle": {
+            "insets": {
+              "top": 18.9,
+              "right": 0,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master text styles",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master text styles",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "Second level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Second level",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "Third level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Third level",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "Fourth level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fourth level",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "Fifth level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fifth level",
+                  "typeface": "Arial"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout9.xml/11",
+          "id": "11",
+          "name": "Footer Placeholder 3",
+          "bbox": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "order": 4,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout9.xml/12",
+          "id": "12",
+          "name": "Slide Number Placeholder 4",
+          "bbox": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›",
+                  "typeface": "Arial"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout9.xml/13",
+          "id": "13",
+          "name": "Logo 15",
+          "bbox": [
+            35.17,
+            35.15,
+            151.18,
+            25.31
+          ],
+          "contentType": "image/png",
+          "imageCrop": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "asset": {
+            "assetId": "/ppt/media/image5.png",
+            "contentType": "image/png",
+            "byteLength": 14695
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image5.png",
+            "contentType": "image/png",
+            "byteLength": 14695
+          }
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/6",
+          "id": "6",
+          "name": "Slide Number Placeholder 4",
+          "bbox": [
+            1157.83,
+            35,
+            87,
+            21.82
+          ],
+          "geometry": "rect",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "vertical": 1,
+            "verticalAlignment": "top",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          }
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/2",
+          "id": "2",
+          "name": "Title Placeholder 1",
+          "bbox": [
+            35.17,
+            132.28,
+            1209.67,
+            65.61
+          ],
+          "geometry": "rect",
+          "text": "Click to edit Master title style",
+          "textPreview": "Click to edit Master title style",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "vertical": 1,
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "resizeShapeToFitText",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 18.9,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master title style",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master title style",
+                  "typeface": "Arial"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/3",
+          "id": "3",
+          "name": "Text Placeholder 2",
+          "bbox": [
+            35.17,
+            197.9,
+            1209.67,
+            486.27
+          ],
+          "geometry": "rect",
+          "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level",
+          "textPreview": "Click to edit Master text styles | Second level | Third level | Fourth level | Fifth level",
+          "resolvedTextStyle": {
+            "vertical": 1,
+            "wrap": "square",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 18.9,
+              "right": 0,
+              "bottom": 7.56,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master text styles",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master text styles",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "Second level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Second level",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "Third level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Third level",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "Fourth level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fourth level",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "Fifth level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fifth level",
+                  "typeface": "Arial"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/5",
+          "id": "5",
+          "name": "Footer Placeholder 3",
+          "bbox": [
+            35.17,
+            699.21,
+            597.32,
+            20.79
+          ],
+          "geometry": "rect",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "vertical": 1,
+            "verticalAlignment": "top",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/32ponyts",
+      "id": "7",
+      "name": "Title 1",
+      "bbox": [
+        35.17,
+        132.28,
+        1209.67,
+        65.61
+      ],
+      "text": "Monitor quality, workload and drift",
+      "textPreview": "Monitor quality, workload and drift",
+      "resolvedFontSize": 42.67,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "vertical": 1,
+        "fontSize": 42.67,
+        "typeface": "Georgia",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 18.9,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Monitor quality, workload and drift"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Monitor quality, workload and drift",
+          "resolvedTextStyle": {
+            "fontSize": 37.33,
+            "typeface": "Arial",
+            "color": "#000000"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Monitor quality, workload and drift",
+              "fontSize": 37.33,
+              "typeface": "Arial",
+              "color": "#000000"
+            }
+          ],
+          "bulletCharacter": "",
+          "lineSpacingPercent": 90000
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gzy5s3a1",
+      "id": "8",
+      "name": "Content Placeholder 2",
+      "bbox": [
+        35.17,
+        188.51,
+        1005.5,
+        490.93
+      ],
+      "text": "EACH RUN\nModel version; thresholds; rows scored; eligible AK rows; OCR, AK and combined flags; risk counts.\n\nWEEKLY OPERATIONS\nQueue size and ageing; reviews completed; reviewer time; escalations; blocked-row QC.\n\nVERIFIED QUALITY SAMPLES\nOCR recall; review precision; low-risk miss rate; AK acceptance rate; results by segment.",
+      "textPreview": "EACH RUN | Model version; thresholds; rows scored; eligible AK rows; OCR, AK and combined flags; risk counts. |  | WEEKLY OPERATIONS | Qu...",
+      "resolvedFontSize": 37.33,
+      "resolvedTextStyle": {
+        "vertical": 1,
+        "fontSize": 37.33,
+        "typeface": "Arial",
+        "color": "#4B5057",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 18.9,
+          "right": 0,
+          "bottom": 7.56,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 15,
+        "lines": [
+          {
+            "index": 1,
+            "text": "EACH RUN"
+          },
+          {
+            "index": 2,
+            "text": ""
+          },
+          {
+            "index": 3,
+            "text": "Model version; thresholds; rows scored; eligible AK rows; OCR, AK and combined flags; risk counts."
+          },
+          {
+            "index": 4,
+            "text": ""
+          },
+          {
+            "index": 5,
+            "text": ""
+          },
+          {
+            "index": 6,
+            "text": ""
+          },
+          {
+            "index": 7,
+            "text": "WEEKLY OPERATIONS"
+          },
+          {
+            "index": 8,
+            "text": ""
+          },
+          {
+            "index": 9,
+            "text": "Queue size and ageing; reviews completed; reviewer time; escalations; blocked-row QC."
+          },
+          {
+            "index": 10,
+            "text": ""
+          },
+          {
+            "index": 11,
+            "text": ""
+          },
+          {
+            "index": 12,
+            "text": ""
+          },
+          {
+            "index": 13,
+            "text": "VERIFIED QUALITY SAMPLES"
+          },
+          {
+            "index": 14,
+            "text": ""
+          },
+          {
+            "index": 15,
+            "text": "OCR recall; review precision; low-risk miss rate; AK acceptance rate; results by segment."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "EACH RUN",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Arial",
+            "color": "#000000"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "EACH RUN",
+              "fontSize": 22,
+              "typeface": "Arial",
+              "color": "#000000"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 100000
+        },
+        {
+          "index": 2,
+          "text": "Model version; thresholds; rows scored; eligible AK rows; OCR, AK and combined flags; risk counts.",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Arial",
+            "color": "#000000"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Model version; thresholds; rows scored; eligible AK rows; OCR, AK and combined flags; risk counts.",
+              "fontSize": 22,
+              "typeface": "Arial",
+              "color": "#000000"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 100000
+        },
+        {
+          "index": 4,
+          "text": "WEEKLY OPERATIONS",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Arial",
+            "color": "#000000"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "WEEKLY OPERATIONS",
+              "fontSize": 22,
+              "typeface": "Arial",
+              "color": "#000000"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 100000
+        },
+        {
+          "index": 5,
+          "text": "Queue size and ageing; reviews completed; reviewer time; escalations; blocked-row QC.",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Arial",
+            "color": "#000000"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Queue size and ageing; reviews completed; reviewer time; escalations; blocked-row QC.",
+              "fontSize": 22,
+              "typeface": "Arial",
+              "color": "#000000"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 100000
+        },
+        {
+          "index": 7,
+          "text": "VERIFIED QUALITY SAMPLES",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Arial",
+            "color": "#000000"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "VERIFIED QUALITY SAMPLES",
+              "fontSize": 22,
+              "typeface": "Arial",
+              "color": "#000000"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 100000
+        },
+        {
+          "index": 8,
+          "text": "OCR recall; review precision; low-risk miss rate; AK acceptance rate; results by segment.",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Arial",
+            "color": "#000000"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "OCR recall; review precision; low-risk miss rate; AK acceptance rate; results by segment.",
+              "fontSize": 22,
+              "typeface": "Arial",
+              "color": "#000000"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 100000
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/o3i5w3ad",
+      "id": "4",
+      "name": "Slide Number Placeholder 4",
+      "bbox": [
+        1157.83,
+        35,
+        87,
+        21.82
+      ],
+      "text": "13",
+      "textPreview": "13",
+      "resolvedFontSize": 10.67,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "vertical": 1,
+        "fontSize": 10.67,
+        "typeface": "Arial",
+        "color": "#4B5057",
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "13"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "13",
+          "lineSpacingPercent": 100000,
+          "resolvedTextStyle": {
+            "fontSize": 10.67,
+            "typeface": "Arial",
+            "color": "#000000",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "13",
+              "fontSize": 10.67,
+              "typeface": "Arial",
+              "color": "#000000",
+              "textTransform": "none"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ]
+    }
+  ],
+  "composeRuns": []
+}

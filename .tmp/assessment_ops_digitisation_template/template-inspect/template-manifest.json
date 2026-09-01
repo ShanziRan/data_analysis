@@ -1,0 +1,160 @@
+{
+  "sourcePptx": "/Users/ranshanzi/Downloads/digitisation/Digitisation_OCR_review_classifier_Applied_AI.pptx",
+  "workspace": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template",
+  "outDir": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-inspect",
+  "generatedAt": "2026-09-01T09:19:48.503Z",
+  "slideCount": 6,
+  "slideArtifacts": [
+    {
+      "slide": 1,
+      "previewPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-inspect/source-slides/source-slide-01.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-01.png",
+      "layoutPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-inspect/layouts/source-slide-01.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-01.layout.json"
+    },
+    {
+      "slide": 2,
+      "previewPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-inspect/source-slides/source-slide-02.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-02.png",
+      "layoutPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-inspect/layouts/source-slide-02.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-02.layout.json"
+    },
+    {
+      "slide": 3,
+      "previewPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-inspect/source-slides/source-slide-03.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-03.png",
+      "layoutPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-inspect/layouts/source-slide-03.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-03.layout.json"
+    },
+    {
+      "slide": 4,
+      "previewPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-inspect/source-slides/source-slide-04.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-04.png",
+      "layoutPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-inspect/layouts/source-slide-04.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-04.layout.json"
+    },
+    {
+      "slide": 5,
+      "previewPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-inspect/source-slides/source-slide-05.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-05.png",
+      "layoutPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-inspect/layouts/source-slide-05.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-05.layout.json"
+    },
+    {
+      "slide": 6,
+      "previewPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-inspect/source-slides/source-slide-06.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-06.png",
+      "layoutPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-inspect/layouts/source-slide-06.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-06.layout.json"
+    }
+  ],
+  "inspectPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-inspect/template-inspect.ndjson",
+  "inspectRelativePath": "template-inspect/template-inspect.ndjson",
+  "inspectTruncated": false,
+  "inspectMetadata": {
+    "revision": "19k2e8",
+    "target": {
+      "id": "pr/rv4kr7"
+    },
+    "kind": {
+      "requested": "slide,textbox,shape,image,table,chart",
+      "tokens": [
+        "slide",
+        "textbox",
+        "shape",
+        "image",
+        "table",
+        "chart"
+      ]
+    },
+    "include": {
+      "tokens": []
+    },
+    "exclude": {
+      "tokens": []
+    },
+    "notices": []
+  },
+  "extractedMedia": [
+    {
+      "entry": "ppt/media/image11.png",
+      "path": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-inspect/assets/ppt/media/image11.png",
+      "relativePath": "template-inspect/assets/ppt/media/image11.png",
+      "bytes": 27495
+    },
+    {
+      "entry": "ppt/media/image10.png",
+      "path": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-inspect/assets/ppt/media/image10.png",
+      "relativePath": "template-inspect/assets/ppt/media/image10.png",
+      "bytes": 81027
+    },
+    {
+      "entry": "ppt/media/image9.jpeg",
+      "path": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-inspect/assets/ppt/media/image9.jpeg",
+      "relativePath": "template-inspect/assets/ppt/media/image9.jpeg",
+      "bytes": 150244
+    },
+    {
+      "entry": "ppt/media/image8.jpeg",
+      "path": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-inspect/assets/ppt/media/image8.jpeg",
+      "relativePath": "template-inspect/assets/ppt/media/image8.jpeg",
+      "bytes": 108756
+    },
+    {
+      "entry": "ppt/media/image7.jpeg",
+      "path": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-inspect/assets/ppt/media/image7.jpeg",
+      "relativePath": "template-inspect/assets/ppt/media/image7.jpeg",
+      "bytes": 159491
+    },
+    {
+      "entry": "ppt/media/image6.jpeg",
+      "path": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-inspect/assets/ppt/media/image6.jpeg",
+      "relativePath": "template-inspect/assets/ppt/media/image6.jpeg",
+      "bytes": 121004
+    },
+    {
+      "entry": "ppt/media/image5.png",
+      "path": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-inspect/assets/ppt/media/image5.png",
+      "relativePath": "template-inspect/assets/ppt/media/image5.png",
+      "bytes": 14695
+    },
+    {
+      "entry": "ppt/media/image4.png",
+      "path": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-inspect/assets/ppt/media/image4.png",
+      "relativePath": "template-inspect/assets/ppt/media/image4.png",
+      "bytes": 14761
+    },
+    {
+      "entry": "ppt/media/image3.png",
+      "path": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-inspect/assets/ppt/media/image3.png",
+      "relativePath": "template-inspect/assets/ppt/media/image3.png",
+      "bytes": 33801
+    },
+    {
+      "entry": "ppt/media/image2.png",
+      "path": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-inspect/assets/ppt/media/image2.png",
+      "relativePath": "template-inspect/assets/ppt/media/image2.png",
+      "bytes": 33053
+    },
+    {
+      "entry": "ppt/media/image1.png",
+      "path": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-inspect/assets/ppt/media/image1.png",
+      "relativePath": "template-inspect/assets/ppt/media/image1.png",
+      "bytes": 35408
+    }
+  ],
+  "fonts": [
+    "+mj-lt",
+    "+mn-lt",
+    "Arial",
+    "Georgia",
+    "Value Sans Pro",
+    "Value Serif Pro Medium"
+  ],
+  "packageParts": {
+    "mediaCount": 11,
+    "slideXmlCount": 6,
+    "chartCount": 0,
+    "tableSlideCount": 1
+  }
+}

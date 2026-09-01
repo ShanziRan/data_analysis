@@ -1,4 +1,5 @@
 from pathlib import Path
+import math
 
 from PIL import Image, ImageDraw, ImageFont
 from docx import Document
@@ -43,56 +44,79 @@ def multiline_center(draw, box, text, size=25, bold=False):
 def arrow(draw, start, end):
     draw.line((start, end), fill="black", width=4)
     x, y = end
-    draw.polygon([(x, y), (x - 16, y - 9), (x - 16, y + 9)], fill="black")
+    angle = math.atan2(end[1] - start[1], end[0] - start[0])
+    size = 17
+    left = (x - size * math.cos(angle - .5), y - size * math.sin(angle - .5))
+    right = (x - size * math.cos(angle + .5), y - size * math.sin(angle + .5))
+    draw.polygon([(x, y), left, right], fill="black")
+
+
+def diagram_box(draw, box, label, fill="white", size=23, bold=False):
+    draw.rounded_rectangle(box, radius=12, outline="black", width=3, fill=fill)
+    multiline_center(draw, box, label, size, bold)
 
 
 def training_diagram(path):
-    image = Image.new("RGB", (1800, 340), "white")
+    image = Image.new("RGB", (2100, 380), "white")
     draw = ImageDraw.Draw(image)
-    boxes = [(30 + i * 295, 85, 255 + i * 295, 255) for i in range(6)]
+    boxes = [(20 + i * 295, 90, 250 + i * 295, 275) for i in range(7)]
     labels = [
         "Reviewed data\nhuman.csv",
-        "Compare\nCaptured vs Published",
-        "Create\ntraining labels",
-        "Calculate\n16 features",
-        "Split by scan_id\nand train",
-        "Save model\nand threshold",
+        "Label OCR change\nCaptured != Published",
+        "Learn character\nconfusions",
+        "Calculate 16\nOCR features",
+        "Split by scan_id\ntrain / validation",
+        "Train OCR and\ncorrection-type models",
+        "Choose recall\nthreshold; refit\nand save",
     ]
     for box, label in zip(boxes, labels):
-        draw.rounded_rectangle(box, radius=10, outline="black", width=3, fill="white")
-        multiline_center(draw, box, label, 23, bold=False)
+        diagram_box(draw, box, label, size=22)
     for left, right in zip(boxes, boxes[1:]):
-        arrow(draw, (left[2] + 8, 170), (right[0] - 8, 170))
+        arrow(draw, (left[2] + 7, 182), (right[0] - 7, 182))
     image.save(path)
 
 
 def scoring_diagram(path):
-    image = Image.new("RGB", (1800, 520), "white")
+    image = Image.new("RGB", (2100, 980), "white")
     draw = ImageDraw.Draw(image)
-    top_boxes = [(25 + i * 340, 55, 285 + i * 340, 210) for i in range(5)]
-    labels = [
-        "Unreviewed data\nno_human.csv",
-        "Parse key and\ncalculate features",
-        "Predict review\nprobability",
-        "Apply saved\nthreshold",
-        "Risk and\nreview flag",
-    ]
-    for box, label in zip(top_boxes, labels):
-        draw.rounded_rectangle(box, radius=10, outline="black", width=3, fill="white")
-        multiline_center(draw, box, label, 23)
-    for left, right in zip(top_boxes, top_boxes[1:]):
-        arrow(draw, (left[2] + 8, 132), (right[0] - 8, 132))
-    low = (1190, 320, 1450, 465)
-    review = (1510, 320, 1770, 465)
-    draw.rounded_rectangle(low, radius=10, outline="black", width=3, fill="white")
-    draw.rounded_rectangle(review, radius=10, outline="black", width=3, fill="white")
-    multiline_center(draw, low, "Low risk\nquality-control sample", 22)
-    multiline_center(draw, review, "Medium / high\nhuman review", 22)
-    source = top_boxes[-1]
-    draw.line((source[0] + 70, source[3] + 8, source[0] + 70, 285, 1320, 285, 1320, low[1] - 8), fill="black", width=4)
-    draw.polygon([(1320, low[1]), (1311, low[1] - 16), (1329, low[1] - 16)], fill="black")
-    draw.line((source[2] - 55, source[3] + 8, source[2] - 55, 285, 1640, 285, 1640, review[1] - 8), fill="black", width=4)
-    draw.polygon([(1640, review[1]), (1631, review[1] - 16), (1649, review[1] - 16)], fill="black")
+    source = (700, 30, 1400, 150)
+    prep = (700, 205, 1400, 335)
+    diagram_box(draw, source, "Unreviewed OCR data: no_human.csv", size=25)
+    diagram_box(draw, prep, "Parse answer key independently; calculate shared evidence", size=24)
+    arrow(draw, (1050, 150), (1050, 205))
+
+    ocr_head = (80, 410, 560, 530)
+    ocr_model = (80, 590, 560, 735)
+    ocr_out = (80, 795, 560, 925)
+    ak_head = (650, 410, 1130, 530)
+    ak_sem = (650, 590, 1130, 735)
+    ak_gate = (1230, 590, 2020, 735)
+    ak_out = (1230, 795, 2020, 925)
+    combined = (650, 795, 1130, 925)
+
+    diagram_box(draw, ocr_head, "Decision 1: OCR review", fill="#EAF2F8", size=25, bold=True)
+    diagram_box(draw, ocr_model, "16 features -> logistic probability\n-> saved threshold and risk", size=23)
+    diagram_box(draw, ocr_out, "requires_ocr_review\ncorrection type", fill="#F2F8FC", size=23)
+    diagram_box(draw, ak_head, "Decision 2: AK coverage", fill="#EAF2F8", size=25, bold=True)
+    diagram_box(draw, ak_sem, "Eligible non-MCQ answer\nwhole-string semantic vs each AK variation", size=22)
+    diagram_box(draw, ak_gate, "Require strong semantic score + low surface match + gap >= 0.15\nBlock single-token, number, date/time, negation, polarity, unit and key-term conflicts", size=20)
+    diagram_box(draw, ak_out, "possible_gap_suggestion\nconflict reasons and best variation", fill="#F2F8FC", size=22)
+    diagram_box(draw, combined, "Combined routing\nrequires_any_human_review + review_reasons", fill="#F7F7F7", size=22)
+
+    arrow(draw, (900, 335), (320, 410))
+    arrow(draw, (1200, 335), (890, 410))
+    arrow(draw, (320, 530), (320, 590))
+    arrow(draw, (320, 735), (320, 795))
+    arrow(draw, (890, 530), (890, 590))
+    arrow(draw, (1130, 662), (1230, 662))
+    arrow(draw, (1625, 735), (1625, 795))
+    arrow(draw, (560, 860), (650, 860))
+    arrow(draw, (1230, 860), (1130, 860))
+
+    footer_font = diagram_font(22)
+    footer = "Write flagged CSV and scoring_report.json with parameters, counts, rates and score distributions"
+    bounds = draw.textbbox((0, 0), footer, font=footer_font)
+    draw.text(((2100 - (bounds[2] - bounds[0])) / 2, 946), footer, font=footer_font, fill="black")
     image.save(path)
 
 
@@ -148,9 +172,9 @@ def numbered(doc, text):
     return p
 
 
-ASSET_DIR.mkdir(parents=True, exist_ok=True)
-training_path = ASSET_DIR / "training_workflow.png"
-scoring_path = ASSET_DIR / "scoring_workflow.png"
+OUT.parent.mkdir(parents=True, exist_ok=True)
+training_path = OUT.parent / "training_workflow_current.png"
+scoring_path = OUT.parent / "scoring_workflow_current.png"
 training_diagram(training_path)
 scoring_diagram(scoring_path)
 
@@ -171,100 +195,105 @@ normal.paragraph_format.line_spacing = 1.08
 
 title = doc.add_paragraph()
 title.paragraph_format.space_after = Pt(2)
-font(title.add_run("OCR human-review model"), size=18, bold=True)
+font(title.add_run("OCR review and answer-key coverage pipeline"), size=18, bold=True)
 subtitle = doc.add_paragraph()
 subtitle.paragraph_format.space_after = Pt(8)
-font(subtitle.add_run("Short discussion guide: training, scoring and use"), size=11)
+font(subtitle.add_run("Concise discussion guide: current training, scoring and review workflow"), size=11)
 
-heading(doc, "The aim")
-para(doc, "Use previous human review decisions to identify which new OCR-captured answers are most likely to need human checking. The model prioritises work; it does not correct answers or replace the reviewer.")
+heading(doc, "Purpose")
+para(doc, "Prioritise OCR answers for human review while separately identifying possible valid answers missing from the answer key. Both outputs are suggestions for reviewers; neither changes an answer automatically.")
 
-heading(doc, "What it is trained on")
+heading(doc, "Two independent decisions")
+bullet(doc, "OCR review: predicts whether Captured is likely to need correction, using patterns learned from human-reviewed data.")
+bullet(doc, "Answer-key coverage: uses whole-string semantic comparison and conservative conflict rules to suggest possible missing AK variations.")
+bullet(doc, "Combined routing: requires_any_human_review joins the queues while review_reasons preserves why each row was flagged.")
+
+heading(doc, "OCR training data")
 bullet(doc, "Source: data/hitl/human.csv - 341,190 reviewed rows.")
-bullet(doc, "Captured is the original OCR answer. Published is the human-verified answer.")
-bullet(doc, "Training label - no correction: normalised Captured equals Published.")
-bullet(doc, "Training label - review needed: normalised Captured differs from Published.")
-bullet(doc, "There are 7,857 corrected rows (about 2.3%), so corrected examples receive extra weight.")
-bullet(doc, "Validation is split by scan_id, keeping answers from the same scan together.")
+bullet(doc, "Captured is the original OCR answer; Published is the human-verified answer.")
+bullet(doc, "OCR label: review needed when normalised Captured differs from Published; otherwise no correction.")
+bullet(doc, "7,857 rows were corrected (2.3%); class weights compensate for the imbalance.")
+bullet(doc, "The AK-gap rule is not trained because accepted/rejected AK-suggestion feedback is not yet available.")
 
 heading(doc, "Training workflow")
 p = doc.add_paragraph()
 p.alignment = WD_ALIGN_PARAGRAPH.CENTER
 p.paragraph_format.space_after = Pt(3)
 shape = p.add_run().add_picture(str(training_path), width=Inches(6.75))
-set_alt_text(shape, "Training workflow from reviewed data through labels and features to the saved model and threshold")
+set_alt_text(shape, "Current OCR training workflow from reviewed data to saved models and recall threshold")
 
-heading(doc, "Important rules")
-bullet(doc, "Published creates training labels but is never a scoring input.")
-bullet(doc, "Answer-key parsing is independent of Captured and bounded for very large keys.")
-bullet(doc, "Blank non-MCQ captures have no distance or similarity; the blank indicator is used.")
-bullet(doc, "MCQ correction types can only be assigned to single-letter MCQ answer keys.")
+heading(doc, "Latest validation snapshot")
+bullet(doc, "Split by scan_id so related rows remain in one fold.")
+bullet(doc, "Target recall 98%; measured validation recall 98.03% at threshold 0.6814.")
+bullet(doc, "Validation precision 24.95%, review rate 8.84%, and average precision 0.6127.")
+
+heading(doc, "Data rules")
+bullet(doc, "Published creates labels but is never a scoring feature.")
+bullet(doc, "AK parsing is independent of Captured and bounded to 100 variations by default.")
+bullet(doc, "Blank non-MCQ captures have no distance or similarity; is_blank carries the state.")
 
 doc.add_page_break()
 
-heading(doc, "Features used by the main review model")
+heading(doc, "Evidence used by the OCR model")
 for item in [
     "ocr_confidence - OCR engine confidence.",
     "edit_similarity - normalised similarity to the closest accepted variation.",
-    "char_ngram_similarity - similarity between short overlapping character groups.",
-    "token_similarity - overlap between words/tokens.",
-    "answer_exact - whether Captured exactly matches an accepted variation.",
-    "is_blank - whether Captured is empty or --blank--.",
-    "is_mcq - whether the answer key is a single-letter MCQ key.",
-    "captured_length and best_answer_length.",
-    "length_difference - difference between the two lengths.",
+    "char_ngram_similarity - overlap between short character sequences.",
+    "token_similarity - exact word-set overlap; it is not semantic embedding.",
+    "answer_exact, is_blank and is_mcq - structural indicators.",
+    "captured_length, best_answer_length and length_difference.",
     "digit_fraction, alpha_fraction and punctuation_fraction.",
-    "variation_count - number of bounded accepted variations considered.",
-    "known_confusion_score - strength of the strongest historical character confusion.",
-    "known_confusion_fraction - share of required edits recognised from history.",
+    "variation_count - bounded accepted variations considered.",
+    "known_confusion_score and known_confusion_fraction - evidence from historical character changes.",
 ]:
     bullet(doc, item)
-para(doc, "min_distance is also logged in the scored CSV as supporting evidence. It is left empty for blank non-MCQ captures.", after=4)
+para(doc, "min_distance is logged as evidence but is not a model feature. It remains empty for blank non-MCQ captures.", after=4)
 
-heading(doc, "Possible labels and correction types")
-bullet(doc, "Review flag: requires_human_review is True or False.")
-bullet(doc, "Risk label: low, medium or high.")
-bullet(doc, "Correction type: no_correction, substitution, insertion, deletion, transposition or multiple_edits.")
-bullet(doc, "Blank-related type: blank_to_text or text_to_blank.")
-bullet(doc, "MCQ type: mcq_correction, only for MCQ answer keys.")
-para(doc, "The correction type is supporting guidance. It is not an automatic correction and does not determine the risk label.")
-
-heading(doc, "Current risk rules")
-bullet(doc, "Low: probability is below review_threshold; requires_human_review is False.")
-bullet(doc, "Medium: probability is at or above review_threshold but below max(0.8, review_threshold).")
-bullet(doc, "High: probability is at or above max(0.8, review_threshold).")
-para(doc, "The threshold targets 95% correction recall by default. This favours catching errors but can create a larger review queue.")
-
-doc.add_page_break()
-
-heading(doc, "Scoring and review workflow")
+heading(doc, "Scoring workflow")
 p = doc.add_paragraph()
 p.alignment = WD_ALIGN_PARAGRAPH.CENTER
 p.paragraph_format.space_after = Pt(4)
 shape = p.add_run().add_picture(str(scoring_path), width=Inches(6.75))
-set_alt_text(shape, "Scoring workflow from unreviewed data through probability and threshold to low-risk sampling or human review")
+set_alt_text(shape, "Current scoring workflow with separate OCR review and answer-key coverage decisions and combined routing")
 
-heading(doc, "How the flagged CSV should be used")
-bullet(doc, "Filter requires_human_review = True and sort review_probability from highest to lowest.")
-bullet(doc, "Show Captured, ANSWER Key, OCR confidence, similarity evidence and the original scan image.")
-bullet(doc, "Record the verified result in new human-review fields; do not overwrite Captured.")
-bullet(doc, "Audit low-risk rows, especially those just below the threshold.")
-bullet(doc, "Add completed reviews to future training data after quality checks.")
+heading(doc, "OCR outputs")
+bullet(doc, "ocr_review_probability and requires_ocr_review come from the trained model and saved threshold.")
+bullet(doc, "ocr_risk_label: low below threshold; medium from threshold to max(0.8, threshold); high above that boundary.")
+bullet(doc, "predicted_ocr_correction_type: no_correction, substitution, insertion, deletion, transposition, multiple_edits, blank_to_text, text_to_blank, case_or_whitespace or mcq_correction.")
 
-heading(doc, "Outputs to keep")
-bullet(doc, "review_probability, requires_human_review and risk_label.")
-bullet(doc, "predicted_correction_type, as supporting guidance only.")
-bullet(doc, "min_distance, edit_similarity, char_ngram_similarity and token_similarity.")
-bullet(doc, "known_confusion_score and known_confusion_fraction.")
-bullet(doc, "UID, scan_id, model version, threshold, reviewer decision and review timestamp.")
+doc.add_page_break()
+
+heading(doc, "Answer-key coverage decision")
+bullet(doc, "Eligible rows are non-MCQ, non-blank and not an exact accepted-answer match.")
+bullet(doc, "all-MiniLM-L6-v2 embeds the complete Captured string and every complete AK variation; the highest cosine similarity is retained.")
+bullet(doc, "possible_gap_suggestion requires semantic similarity at least 0.78 for single-word-versus-phrase or 0.80 for multi-word pairs, surface similarity at most 0.60, and semantic-surface gap at least 0.15.")
+bullet(doc, "Conflicts block different single words, numbers, dates/times, negation, polarity, units or a changed key term in a short near-duplicate.")
+bullet(doc, "Blocked rows keep semantic_similarity, best_semantic_variation and ak_conflict_reasons for audit.")
+
+heading(doc, "AK labels")
+bullet(doc, "possible_answer_key_gap - passes all semantic, surface-gap and conflict gates.")
+bullet(doc, "blocked_by_conflict - semantically related but materially inconsistent.")
+bullet(doc, "semantic_below_threshold, surface_match_existing_ak or insufficient_semantic_surface_gap - fails an evidence gate.")
+bullet(doc, "semantic_not_scored - AK coverage was intentionally skipped.")
+
+heading(doc, "Using the review queue")
+bullet(doc, "Route requires_any_human_review = True; use review_reasons to separate OCR correction, possible AK gap or both.")
+bullet(doc, "For OCR review, prioritise high then medium risk and show the scan plus similarity evidence.")
+bullet(doc, "For AK review, show Captured, best semantic variation, semantic and surface scores, and conflict reasons.")
+bullet(doc, "Record reviewer outcomes in new fields without overwriting Captured; keep a low-risk quality-control sample.")
+
+heading(doc, "Run audit and latest scoring snapshot")
+bullet(doc, "Each run writes the flagged CSV and scoring_report.json with model hash, parameters, thresholds, counts, rates and distributions.")
+bullet(doc, "Latest run: 138,810 rows; 5,477 OCR flags, 193 AK-gap flags, and 5,501 combined review rows (3.96%).")
+bullet(doc, "Recall and precision require verified Published truth and explicit --evaluate-with-published.")
 
 heading(doc, "Points to agree with the lead")
-bullet(doc, "What missed-correction rate is acceptable?")
-bullet(doc, "How many rows can reviewers handle?")
-bullet(doc, "What percentage of low-risk rows should be quality checked?")
-bullet(doc, "Who can approve threshold changes and retraining?")
-bullet(doc, "Which measures will be reported: recall, review precision, review rate, low-risk miss rate and reviewer time?")
+bullet(doc, "Acceptable missed-correction rate and available reviewer capacity.")
+bullet(doc, "Quality-control sample for low-risk and conflict-blocked AK rows.")
+bullet(doc, "Reviewer labels to collect so AK-gap logic can later be trained and validated.")
+bullet(doc, "Ownership of threshold changes, model versions and answer-key updates.")
 
-OUT.parent.mkdir(parents=True, exist_ok=True)
 doc.save(OUT)
 print(OUT.resolve())
+print(training_path.resolve())
+print(scoring_path.resolve())

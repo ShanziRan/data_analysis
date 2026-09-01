@@ -1,0 +1,569 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/y90nupkv",
+    "id": "y90nupkv",
+    "slide": 1,
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
+    "layoutName": "Title - purple",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Cambridge",
+    "colors": {
+      "accent1": "#36C4BC",
+      "accent2": "#3B1266",
+      "accent3": "#5665F8",
+      "accent4": "#E94CC1",
+      "accent5": "#FF6637",
+      "accent6": "#FACB2E",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#4B5057",
+      "lt2": "#E8ECEC",
+      "hlink": "#3345DE",
+      "folHlink": "#3B1266"
+    },
+    "fontScheme": {
+      "name": "Custom 1",
+      "majorFont": {
+        "latinTypeface": "Georgia"
+      },
+      "minorFont": {
+        "latinTypeface": "Arial"
+      }
+    },
+    "typefaces": [
+      "Arial",
+      "Georgia"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
+      "name": "Title - purple",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "backgroundColor": "#3C1366",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/16",
+          "id": "16",
+          "name": "Brand graphic 6",
+          "bbox": [
+            484.98,
+            0,
+            795.02,
+            624.66
+          ],
+          "contentType": "image/png",
+          "asset": {
+            "assetId": "/ppt/media/image.png",
+            "contentType": "image/png",
+            "byteLength": 35408
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image.png",
+            "contentType": "image/png",
+            "byteLength": 35408
+          }
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/14",
+          "id": "14",
+          "name": "Title 1",
+          "bbox": [
+            33.58,
+            302.86,
+            1005.5,
+            59.98
+          ],
+          "text": "Click to edit Master title style",
+          "textPreview": "Click to edit Master title style",
+          "resolvedTextStyle": {
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master title style",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master title style",
+                  "typeface": "Arial"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/10",
+          "id": "10",
+          "name": "Text Placeholder 2",
+          "bbox": [
+            33.58,
+            362.83,
+            1005.5,
+            48.64
+          ],
+          "text": "Click to edit Master text styles",
+          "textPreview": "Click to edit Master text styles",
+          "resolvedTextStyle": {
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master text styles",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master text styles",
+                  "typeface": "Arial"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/13",
+          "id": "13",
+          "name": "Text Placeholder 3",
+          "bbox": [
+            33.58,
+            465.14,
+            1005.5,
+            40.62
+          ],
+          "text": "Click to edit Master text styles",
+          "textPreview": "Click to edit Master text styles",
+          "resolvedTextStyle": {
+            "wrap": "square",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master text styles",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master text styles",
+                  "typeface": "Arial"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/15",
+          "id": "15",
+          "name": "Copyright statement 4",
+          "bbox": [
+            35.17,
+            685,
+            214.6,
+            11.31
+          ],
+          "geometry": "rect",
+          "text": "© Cambridge University Press & Assessment 2026",
+          "textPreview": "© Cambridge University Press & Assessment 2026",
+          "resolvedTextStyle": {
+            "wrap": "square",
+            "autoFit": "resizeShapeToFitText",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "© Cambridge University Press & Assessment 2026",
+              "resolvedTextStyle": {
+                "typeface": "Arial",
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "© Cambridge University Press & Assessment ",
+                  "fontSize": 9.33,
+                  "typeface": "Arial",
+                  "color": "bg1"
+                },
+                {
+                  "index": 2,
+                  "text": "2026",
+                  "fontSize": 9.33,
+                  "typeface": "Arial",
+                  "color": "bg1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/17",
+          "id": "17",
+          "name": "Logo 15",
+          "bbox": [
+            35.2,
+            35,
+            291.1,
+            49.3
+          ],
+          "contentType": "image/png",
+          "imageCrop": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "asset": {
+            "assetId": "/ppt/media/image2.png",
+            "contentType": "image/png",
+            "byteLength": 33053
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image2.png",
+            "contentType": "image/png",
+            "byteLength": 33053
+          }
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/6",
+          "id": "6",
+          "name": "Slide Number Placeholder 4",
+          "bbox": [
+            1157.83,
+            35,
+            87,
+            21.82
+          ],
+          "geometry": "rect",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "vertical": 1,
+            "verticalAlignment": "top",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          }
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/2",
+          "id": "2",
+          "name": "Title Placeholder 1",
+          "bbox": [
+            35.17,
+            132.28,
+            1209.67,
+            65.61
+          ],
+          "geometry": "rect",
+          "text": "Click to edit Master title style",
+          "textPreview": "Click to edit Master title style",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "vertical": 1,
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "resizeShapeToFitText",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 18.9,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master title style",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master title style",
+                  "typeface": "Arial"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/3",
+          "id": "3",
+          "name": "Text Placeholder 2",
+          "bbox": [
+            35.17,
+            197.9,
+            1209.67,
+            486.27
+          ],
+          "geometry": "rect",
+          "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level",
+          "textPreview": "Click to edit Master text styles | Second level | Third level | Fourth level | Fifth level",
+          "resolvedTextStyle": {
+            "vertical": 1,
+            "wrap": "square",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 18.9,
+              "right": 0,
+              "bottom": 7.56,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master text styles",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master text styles",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "Second level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Second level",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "Third level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Third level",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "Fourth level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fourth level",
+                  "typeface": "Arial"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "Fifth level",
+              "resolvedTextStyle": {
+                "typeface": "Arial"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fifth level",
+                  "typeface": "Arial"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/5",
+          "id": "5",
+          "name": "Footer Placeholder 3",
+          "bbox": [
+            35.17,
+            699.21,
+            597.32,
+            20.79
+          ],
+          "geometry": "rect",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "vertical": 1,
+            "verticalAlignment": "top",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ts7md4r2",
+      "id": "6",
+      "name": "Text Placeholder 5",
+      "bbox": [
+        33.58,
+        362.83,
+        1005.5,
+        48.64
+      ],
+      "text": "Operating the OCR review and answer-key monitoring pipeline",
+      "textPreview": "Operating the OCR review and answer-key monitoring pipeline",
+      "resolvedFontSize": 32,
+      "resolvedTextStyle": {
+        "vertical": 1,
+        "fontSize": 32,
+        "typeface": "Arial",
+        "color": "bg1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Operating the OCR review and answer-key"
+          },
+          {
+            "index": 2,
+            "text": "monitoring pipeline"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Operating the OCR review and answer-key monitoring pipeline",
+          "resolvedTextStyle": {
+            "typeface": "Arial"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Operating the OCR review and answer-key monitoring pipeline",
+              "fontSize": 48,
+              "typeface": "Arial",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0,
+          "indent": 0,
+          "lineSpacingPercent": 100000
+        }
+      ]
+    }
+  ],
+  "composeRuns": []
+}

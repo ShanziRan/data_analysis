@@ -1,0 +1,178 @@
+{
+  "sourcePptx": "/Users/ranshanzi/Downloads/digitisation/Digitisation_OCR_review_classifier_Applied_AI.pptx",
+  "mapPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-frame-map.json",
+  "output": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter.pptx",
+  "outputBytes": 842250,
+  "sourceSlideCount": 6,
+  "slideCount": 15,
+  "previewDir": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-preview",
+  "layoutDir": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-layout",
+  "contactSheet": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-contact-sheet.png",
+  "slides": [
+    {
+      "outputSlide": 1,
+      "sourceSlide": 1,
+      "narrativeRole": "opening title",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 1,
+      "previewPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-preview/starter-slide-01.png",
+      "previewRelativePath": "template-starter-preview/starter-slide-01.png",
+      "layoutPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-layout/starter-slide-01.layout.json",
+      "layoutRelativePath": "template-starter-layout/starter-slide-01.layout.json"
+    },
+    {
+      "outputSlide": 2,
+      "sourceSlide": 2,
+      "narrativeRole": "two monitoring decisions",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 3,
+      "previewPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-preview/starter-slide-02.png",
+      "previewRelativePath": "template-starter-preview/starter-slide-02.png",
+      "layoutPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-layout/starter-slide-02.layout.json",
+      "layoutRelativePath": "template-starter-layout/starter-slide-02.layout.json"
+    },
+    {
+      "outputSlide": 3,
+      "sourceSlide": 5,
+      "narrativeRole": "training evidence",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 4,
+      "previewPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-preview/starter-slide-03.png",
+      "previewRelativePath": "template-starter-preview/starter-slide-03.png",
+      "layoutPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-layout/starter-slide-03.layout.json",
+      "layoutRelativePath": "template-starter-layout/starter-slide-03.layout.json"
+    },
+    {
+      "outputSlide": 4,
+      "sourceSlide": 4,
+      "narrativeRole": "training workflow",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 4,
+      "previewPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-preview/starter-slide-04.png",
+      "previewRelativePath": "template-starter-preview/starter-slide-04.png",
+      "layoutPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-layout/starter-slide-04.layout.json",
+      "layoutRelativePath": "template-starter-layout/starter-slide-04.layout.json"
+    },
+    {
+      "outputSlide": 5,
+      "sourceSlide": 2,
+      "narrativeRole": "feature explanation",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 3,
+      "previewPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-preview/starter-slide-05.png",
+      "previewRelativePath": "template-starter-preview/starter-slide-05.png",
+      "layoutPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-layout/starter-slide-05.layout.json",
+      "layoutRelativePath": "template-starter-layout/starter-slide-05.layout.json"
+    },
+    {
+      "outputSlide": 6,
+      "sourceSlide": 3,
+      "narrativeRole": "validation evidence",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 4,
+      "previewPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-preview/starter-slide-06.png",
+      "previewRelativePath": "template-starter-preview/starter-slide-06.png",
+      "layoutPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-layout/starter-slide-06.layout.json",
+      "layoutRelativePath": "template-starter-layout/starter-slide-06.layout.json"
+    },
+    {
+      "outputSlide": 7,
+      "sourceSlide": 4,
+      "narrativeRole": "two decision scoring workflow",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 4,
+      "previewPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-preview/starter-slide-07.png",
+      "previewRelativePath": "template-starter-preview/starter-slide-07.png",
+      "layoutPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-layout/starter-slide-07.layout.json",
+      "layoutRelativePath": "template-starter-layout/starter-slide-07.layout.json"
+    },
+    {
+      "outputSlide": 8,
+      "sourceSlide": 2,
+      "narrativeRole": "OCR risk operations",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 3,
+      "previewPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-preview/starter-slide-08.png",
+      "previewRelativePath": "template-starter-preview/starter-slide-08.png",
+      "layoutPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-layout/starter-slide-08.layout.json",
+      "layoutRelativePath": "template-starter-layout/starter-slide-08.layout.json"
+    },
+    {
+      "outputSlide": 9,
+      "sourceSlide": 4,
+      "narrativeRole": "answer key gap workflow",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 4,
+      "previewPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-preview/starter-slide-09.png",
+      "previewRelativePath": "template-starter-preview/starter-slide-09.png",
+      "layoutPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-layout/starter-slide-09.layout.json",
+      "layoutRelativePath": "template-starter-layout/starter-slide-09.layout.json"
+    },
+    {
+      "outputSlide": 10,
+      "sourceSlide": 5,
+      "narrativeRole": "conflict examples",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 4,
+      "previewPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-preview/starter-slide-10.png",
+      "previewRelativePath": "template-starter-preview/starter-slide-10.png",
+      "layoutPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-layout/starter-slide-10.layout.json",
+      "layoutRelativePath": "template-starter-layout/starter-slide-10.layout.json"
+    },
+    {
+      "outputSlide": 11,
+      "sourceSlide": 4,
+      "narrativeRole": "operations workflow",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 4,
+      "previewPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-preview/starter-slide-11.png",
+      "previewRelativePath": "template-starter-preview/starter-slide-11.png",
+      "layoutPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-layout/starter-slide-11.layout.json",
+      "layoutRelativePath": "template-starter-layout/starter-slide-11.layout.json"
+    },
+    {
+      "outputSlide": 12,
+      "sourceSlide": 2,
+      "narrativeRole": "reviewer feedback fields",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 3,
+      "previewPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-preview/starter-slide-12.png",
+      "previewRelativePath": "template-starter-preview/starter-slide-12.png",
+      "layoutPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-layout/starter-slide-12.layout.json",
+      "layoutRelativePath": "template-starter-layout/starter-slide-12.layout.json"
+    },
+    {
+      "outputSlide": 13,
+      "sourceSlide": 2,
+      "narrativeRole": "monitoring measures",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 3,
+      "previewPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-preview/starter-slide-13.png",
+      "previewRelativePath": "template-starter-preview/starter-slide-13.png",
+      "layoutPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-layout/starter-slide-13.layout.json",
+      "layoutRelativePath": "template-starter-layout/starter-slide-13.layout.json"
+    },
+    {
+      "outputSlide": 14,
+      "sourceSlide": 5,
+      "narrativeRole": "latest scoring run",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 4,
+      "previewPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-preview/starter-slide-14.png",
+      "previewRelativePath": "template-starter-preview/starter-slide-14.png",
+      "layoutPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-layout/starter-slide-14.layout.json",
+      "layoutRelativePath": "template-starter-layout/starter-slide-14.layout.json"
+    },
+    {
+      "outputSlide": 15,
+      "sourceSlide": 6,
+      "narrativeRole": "operating agreement close",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 3,
+      "previewPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-preview/starter-slide-15.png",
+      "previewRelativePath": "template-starter-preview/starter-slide-15.png",
+      "layoutPath": "/Users/ranshanzi/Documents/VSCode/data_analysis/.tmp/assessment_ops_digitisation_template/template-starter-layout/starter-slide-15.layout.json",
+      "layoutRelativePath": "template-starter-layout/starter-slide-15.layout.json"
+    }
+  ]
+}
