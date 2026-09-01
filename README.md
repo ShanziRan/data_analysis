@@ -132,16 +132,6 @@ Review `validation_report.json` before deploying a model. The threshold is chose
 
 The scoring report records the model hash, thresholds, input/output paths, row counts, flag rates and score distributions. Recall and precision are only meaningful when verified `Published` truth is available.
 
-## Tests
-
-Run the test suite without downloading a sentence model:
-
-```bash
-python -m unittest discover -s tests -v
-```
-
-The semantic decision tests use a small deterministic fake encoder.
-
 ## Legacy and analysis utilities
 
 The older pipeline can still be run for comparison:
